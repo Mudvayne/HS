@@ -5,6 +5,7 @@
 \usepackage[autostyle=true,german=quotes]{csquotes}
 \usepackage[T1]{fontenc}
 \usepackage{float}
+\usepackage{floatflt}
 \usepackage{listings}
 \usepackage{color}
 \usepackage[hidelinks]{hyperref}
@@ -40,7 +41,7 @@
 
 \begin{document}
 
-\bibliographystyle{unsrt}
+\bibliographystyle{plain}
 
 \maketitle
 \newpage
@@ -48,7 +49,20 @@
 \newpage
 
 \chapter{Biografie Erich Gamma}\label{se:Biografie Erich Gamma}
-%Erich Gamma ist ein Schweizer Informatiker. Er wurde am 13. März 1961 in Zürich geboren.
+
+\begin{floatingfigure}[r]{6cm}
+	\begin{center}
+		\includegraphics[width=0.35\linewidth]{Bilder/erich.png}
+		\label{Erich Gamma}
+		\quelle{siehe Fußnote \textsuperscript{1}}
+	\end{center}
+\end{floatingfigure}
+
+\footnotetext[1]{$https://www.microsoft.com/italy/futuredecoded/$}
+
+Erich Gamma wurde am 13. März 1961 in Zürich geboren und ist damit ein im Vergleich sehr junger Pionier der Informatik. Er promovierte an der Universität Zürich in Informatik. Danach arbeitete er zunächst als Software-Ingenieur bei \textit{UBILAB}, einem Forschungslabor der Schweizerischen Bankgesellschaft (heute \textit{UBS}) und anschließend bei \textit{Taligent}. Bekannt wurde er vor allem als Mitautor des Buches \textit{Design Patterns – Elements of Reusable Object-Oriented Software} \cite{gamma2004} über Entwurfsmuster. Das Buch entstand im Zuge seiner Dissertation gemeinsam mit Richard Helm, Ralph Johnson und John Vlissides. Vgl. \cite{ErichGammaWikiDe} \\ \\
+Der Titel des Buches wurde in einiger Hinsicht als zu lang erachtet, deshalb wurde der kurze und prägnante Titel: Das Buch der Viererbande (engl.: Gang of Four, kurz: GoF) als Synonym etabliert vgl. \cite{GangOfFour}. Zusammen mit allen Mitglieder der \textit{GoF} erhielt er 2006 den Dahl-Nygaard-Preis, welcher für herausragende berufliche Leistungen im Bereich der Softwareentwicklung von der \textit{Association Internationale pour les Technologies Objets} vergeben wird vgl. \cite{Dahl-Nygaard-Preis}. \\ \\
+Gamma war Initiator der offenen Entwicklungsumgebung Eclipse und hat deren Entwicklung ursprünglich geleitet. Außerdem war er einer der Hauptentwickler von \textit{ET++}, einer portablen \textit{C++}-Klassenbibliothek für interaktive grafische Anwendungen. Er war als Distinguished Engineer bei \textit{Rational Software}, eingestellt. \textit{Rational Software} ist eine Abteilung der \textit{IBM Software Group} in Zürich, welche sich schwerpunktmäßig mit System-, und Analysedesign beschäftigt. Er arbeitete dort am Projekt \textit{Jazz / Rational Team Concert}. Relativ überraschend wechselte er August 2011 zur Microsoft Corporation für die er wieder als Distinguished Engineer tätig ist. Er leitet dort bis heute ein Team, das unterstützend an der Produktion der\textit{ Microsoft}-Entwicklungsumgebung \textit{Microsoft Visual Studio} mitwirkt. Vgl. \cite{ErichGammaWikiDe}
 
 \chapter{Historische Leistung: Design Patterns}\label{se:Historische Leistung: Design Patterns}
 Die deutsche Bezeichnung von Design Patterns ist Entwurfs Muster. Ein Muster ist im Allgemeinen eine gleichbleibende Struktur, in einer sich wiederholenden Sache. Da Muster auch wiederkehrende Denk- oder Verhaltensweisen sein können, ist die Bezeichnung Design Patterns treffend, denn sie bieten immer gleich bleibende Lösungsstrukturen für verschiedene Problemtypen im objektorierntierten Softwareentwurf.
@@ -57,7 +71,7 @@ Die Idee von Mustern wurde schon vor der Software Entwicklung in anderen Diszipl
 
 \section{Motivation}\label{se:Motivation}
 
-Ein großes Ziel der objektorientierten Softwareentwicklung ist die Erzeugung von wiederverwendbaren Teilen. Vor Gammas Arbeit war der Design-Teil davon aber meistens ausgegrenzt. Es gab einfach kein universelles Werkzeug, um Designs wiederverwendbar zu machen.
+Ein großes Ziel der objektorientierten Softwareentwicklung ist die Erzeugung von wiederverwendbaren Teilen. Vor Gammas Arbeit\footnote[1]{Hier und folgend wird häufig von \textit{Gammas Arbeit} gesprochen. Das kann den Eindruck erwecken, dass es sich um seinen alleinigen Verdienst handle. Natürlich ist damit immer die Gesamtleistung aller Autoren des Buches \textit{Design Patterns – Elements of Reusable Object-Oriented Software} \cite{gamma2004} gemeint.} war der Design-Teil davon aber meistens ausgegrenzt. Es gab einfach kein universelles Werkzeug, um Designs wiederverwendbar zu machen.
 \\ \\
 Einen von Anfang an wiederverwendbaren und flexiblen Entwurf zu erstellen, kann sehr schwierig sein. Ein häufiges abändern von Entwürfen ist die Folge. Erich Gamma hat hier ein wichtiges Problem erkannt. Er sah die Tendenz, dass wiederkehrende Probleme immer wieder von Grund auf neu angegangen wurden. Dieser immer wieder neu entstehende Freiraum der Entwicklung kostet Zeit und schafft viel Raum für Fehler. Vgl. \cite[S. 1]{gamma2004}
 \\ \\
@@ -143,7 +157,7 @@ Klassenbasierte Verhaltensmuster greifen auf Vererbung zurück, um Funktionalit�
 Objektbasierte Verhaltensmuster verwenden stattdessen Objektkomposition (z.B. durch Aggregation). Viele von Erich Gamma vorgestellten objektbasierte Verhaltensmuster beschreiben, wie Gruppen von Objekten an einer Aufgabe beteiligt sind, die keines der teilnehmenden Objekte alleine lösen könnte. Ein Muster muss somit die Abhängigkeiten der einzelnen Objekte auf sinnvolle Weise festlegen. Vgl. \cite[S. 271]{gamma2004}
 
 \section{Beispiele}
-In diesem Kapitel wird für jede der drei Klassifizierungsarten ein Beispielmuster im Detail beschrieben.
+In diesem Kapitel wird für jede der drei Klassifizierungsansätzen ein typisches von Gamma vorgestelltes Beispielmuster im Detail beschrieben.
 
 \subsection{Beispiel für Erzeugungsmuster: Abstrakte Fabrik}
 
@@ -202,16 +216,20 @@ Will man mehrere Algorithmen zu einer bestimmten Problemstellung kapseln und aus
 Das Konzept des Musters ist sehr einfach und lässt sich schnell umsetzen. Ein Beispiel mit drei konkreten Algorithmen ist in Abbildung \ref{fig:Strategie} zu sehen. Der Kontext, der die Strategie nach außen an seine Klienten anbietet, hält ein Objekt des Typs Strategie vor und ist in Besitz alle für die Algorithmen notwendigen Daten. Eine Strategie ist wiederum die Schnittstelle für konkrete Strategien, welche wiederum jeweils eine andere (austauschbare) Variante eines Algorithmus implementieren. Damit wird eine Entkopplung der Algorithmen und der Klassen die sie benötigen hergestellt. Natürlich muss dafür der konkrete Algorithmus für die Auswahl, bei der anwendenden Klasse bekannt sein. Eine Möglichkeit die Algorithmen mit Eingabedaten zu versorgen wäre, indem sich der Kontext selbst der Strategie übergibt. Die Strategie kann dann je nach Bedarf selbst auf die von ihr benötigten Daten zurückgreifen.
 
 \chapter{Herkunft und Reichweite}\label{Muster}
+Das Konzept der Muster wurde vor allem von Christopher Alexander geprägt. Seine Bücher zu Mustern in Gebäude und Städtebau gingen voll mit der Zeit und können heute als Klassiker bezeichnet werden. Muster haben sich in vielen anderen Bereichen, auch abseits der Architektur, durchgesetzt. Dieses Kapitel soll die Idee Alexanders vorstellen, ihre Umsetzung in der Gebäude-, und Städtearchitektur kurz beleuchten und als Beispiel für deren Reichweite das Konzept der bekannten Anti-Patterns vermitteln.
 
 \section{Die Idee des Musters nach Christopher Alexander}
+Alexander1977
+
+
 
 \subsection{Muster in der Gebäude- und Stadtarchitektur}
 
 \subsection{Unterschiede zu Gammas Arbeit}
-Auch wenn das von Christopher Alexander etablierte Konzept der Muster einen großen Einfluß auf viele Menschen hatte, die sich mit diesem Thema beschäftige, gibt es einige Unterschiede zu Gammas Veröffentlichungen: Vgl. \cite[S. 438 - 439]{gamma2004}
+Auch wenn das von Christopher Alexander etablierte Konzept der Muster einen großen Einfluß auf viele andere Bereiche hatte, finden sich insbesondere zu Gammas Veröffentlichungen einige Unterschiede: Vgl. \cite[S. 438 - 439]{gamma2004}
 
 \begin{enumerate} 
-\item Alexander beschäftigt sich mit Gebäuden und Städten, die von Menschen bereits seit Tausenden von Jahren gebaut werden und es damit viele klassische Beispiele gibt, auf die er sich beziehen konnte. Softwaresysteme wurden zur Zeit von Gammas Veröffentlichungen erst seit relativ kurzer Zeit konstruiert und nur wenige davon konnten damals als klassisch bezeichnet werden.
+\item Alexander beschäftigt sich mit Gebäuden und Städten, die von Menschen bereits seit Tausenden von Jahren gebaut werden. Deshalb existierten viele Beispiele, auf die er sich beziehen konnte. Softwaresysteme wurden zur Zeit von Gammas Veröffentlichungen erst seit relativ kurzer Zeit konstruiert und nur wenige davon konnten damals als klassisch bezeichnet werden.
 \item Außerdem gibt Alexander eine Anwendungsreihenfolge seiner Muster an, Gamma macht das nicht.
 \item Ein weiterer Unterschied ist die Herangehensweise. Alexander betont die von ihm adressierten Probleme, Gamma konzentriert sich dagegen mehr auf Lösungen.
 \item Der letzte wirklich große Unterschied zu Gamma ist, dass Alexander behauptet, dass seine Muster vollständige Gebäude erzeugen können. Gamma erhebt nicht den Anspruch darauf, dass seine Muster vollständige Programme erzeugen können.
