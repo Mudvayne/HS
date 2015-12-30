@@ -13,6 +13,7 @@
 \usepackage[sort&compress,numbers]{natbib}
 
 \usepackage{multirow}
+\usepackage{multicol}
 \usepackage{longtable}
 
 \usepackage{caption}
@@ -70,7 +71,7 @@ Die Idee von Mustern wurde schon vor der Software Entwicklung in anderen Diszipl
 
 Ein großes Ziel der objektorientierten Softwareentwicklung ist die Erzeugung von wiederverwendbaren Teilen. Vor Gammas Arbeit\footnote{Hier und im Folgenden wird häufig von \glqq Gammas Arbeit\grqq{} gesprochen. Das kann den Eindruck erwecken, dass es sich um seinen alleinigen Verdienst handle. Natürlich ist in diesem Zusammenhang immer die Gesamtleistung aller Autoren des Buches \textit{Design Patterns – Elements of Reusable Object-Oriented Software} \cite{gamma2004} gemeint.} war der Design-Teil davon aber meistens ausgegrenzt. Es gab einfach kein universelles Werkzeug, um Designs wiederverwendbar zu machen.
 \\ \\
-Einen von Anfang an wiederverwendbaren und flexiblen Entwurf zu erstellen, kann sehr schwierig sein. Ein häufiges abändern von Entwürfen ist die Folge. Erich Gamma hat hier ein wichtiges Problem erkannt. Er sah die Tendenz, dass wiederkehrende Probleme immer wieder von Grund auf neu angegangen wurden. Dieser immer wieder neu entstehende Freiraum der Entwicklung kostet Zeit und schafft viel Raum für Fehler. Vgl. \cite[S. 1]{gamma2004}
+Einen von Anfang an wiederverwendbaren und flexiblen Entwurf zu erstellen, kann sehr schwierig sein. Ein häufiges Abändern oder Revidieren von Entwürfen ist die Folge. Erich Gamma hat hier ein wichtiges Problem erkannt. Er sah die Tendenz, dass wiederkehrende Probleme immer wieder von Grund auf neu angegangen wurden. Das kostet Zeit und schafft viel Raum für Fehler. Vgl. \cite[S. 1]{gamma2004}
 \\ \\
 Erich Gamma wollte die Vorteile von Mustern auf den großen Bereich des objektorientierten Software Entwurfs ausweiten und adaptierte die Idee in diesen Bereich.
 
@@ -84,27 +85,49 @@ Als Grundlage für Design Patterns mussten einige Bestandteile von objektorienti
 
 \chapter{Design Patterns im Detail}\label{se:Design Patterns im Detail}
 Der Unterschied zu den von Christopher Alexander vorgestellten Mustern ist, dass es sich beim objektorientierten Entwurf eben nicht um Türen und Wände, sondern um Objekte und Schnittstellen handelt vgl. \cite[S. 3]{gamma2004}.
-Aus der Architektursicht schließen Design Patterns die Lücke zwischen Klassenbibliotheken und Frameworks. Dabei haben sie weniger Architekturelemente als ein Framework, sind dabei aber auch abstrakter. Letzteres hat wiederum den Vorteil, dass sie nicht auf bestimmte Programmiersprachen beschränkt sind.
-
-\section{Was sind Design Patterns?}\label{se:Was sind Design Patterns?}
-
-Nach \cite[S. 4]{gamma2004} sind Entwurfsmuster 
+Aus der Architektursicht schließen Design Patterns die Lücke zwischen Klassenbibliotheken und Frameworks. Dabei haben sie weniger Architekturelemente als ein Framework, sind dabei aber auch abstrakter. Letzteres hat wiederum den Vorteil, dass sie nicht auf bestimmte Programmiersprachen beschränkt sind. \\ \\
+Nach \cite[S. 4]{gamma2004} sind Design Patterns 
 
 \begin{quote}
 	\textit{\glqq Beschreibungen zusammenarbeitender Objekte und Klassen, die maßgeschneidert sind, um ein allgemeines Entwurfsproblem in einem bestimmten Kontext zu lösen\grqq.}
 \end{quote} 
 \smallskip
-Jedes Muster besitzt vier grundlegende Elemente:
-\begin{itemize}
-	\item Mustername
-	\item Problemabschnitt
-	\item Lösungsabschnitt
-	\item Konsequenzabschnitt
-\end{itemize}
+Ein Design Pattern besteht dabei aus drei grundlegenden Teilen vgl. \cite{Gamma1993}:
+\begin{enumerate}
+	\item Einer abstrakten Beschreibung eines Zusammenspiels von Klassen oder Objekten und ihrer Struktur.
+	\item Das Problem im Entwurf, das von dieser abstrakten Struktur gelöst werden soll.
+	\item Die Konsequenzen für die Systemarchitektur, wenn die abstrakte Struktur darauf angewandt wird.
+\end{enumerate}	
 
-Der Name des Musters soll ein Stichwort zur Benennung des Entwurfsproblems und seiner Lösung sein. Der Problemabschnitt adressiert Probleme, die mit diesem Muster lösbar sind, also wo das Muster sinnvoll einsetzbar ist. Im Lösungsabschnitt findet das eigentliche Muster seinen Platz, hier wird anhand einer abstrakten Beschreibung die Lösung des Problems vorgeschlagen. Im Konsequenzabschnitt werden mögliche Konsequenzen des resultierenden Entwurfs beleuchtet. Dies betrifft zum Beispiel allgemein die Vor- und Nachteile des Musters, Auswirkungen auf Speicherplatzverbrauch und Ausführungszeit oder den Einfluss auf die Flexibilität und Erweiterbarkeit. Vgl. \cite[S. 3 - 4]{gamma2004}
-
-\section{Klassifizierung}\label{se:Klassifizierung}
+\section{Beschreibung von Design Patterns}\label{se:Beschreibung von Design Patterns}
+Um einen Entwurf wiederverwendbar zu machen, reicht es nicht aus, sich ausschließlich auf grafische Notationen zu verlassen. Diese sind zwar wichtig, sagen aber z.B. nichts über mögliche Alternativen oder Vor- und Nachteile aus. Gamma wählte deshalb für sein Buch ein einheitliches Schema zur Beschreibung von Patterns aus vgl. \cite[S. 8-10]{gamma2004}. \\ \\
+\textbf{Mustername und Klassifizierung} \\
+Soll knapp und präzise den wesentlichen Gehalt des Patterns vermitteln. \\ \\
+\textbf{Zweck} \\
+Was macht das Pattern? Welchen Grundprinzip folgt es und welchem Zweck dient es? \\ \\
+\textbf{Auch bekannt als} \\
+Gibt es andere Bezeichnungen für dieses Pattern? \\ \\
+\textbf{Motivation} \\
+Beschreibt ein mögliches Szenario für den Einsatz dieses Patterns, also welches Entwurfsproblem adressiert wird. \\ \\
+\textbf{Anwendbarkeit} \\
+In welchen Problemsituationen kann dieses Pattern sinnvoll eingesetzt werden? Dieser Abschnitt hilft dem Entwickler dabei, solche Situationen zu identifizieren. \\ \\
+\textbf{Struktur} \\
+Hier findet die grafische Repräsentation der beteiligten Klassen und Objekte und deren Zusammenspiel in Form von Struktur-, und Interaktionsdiagrammen ihren Platz. \\ \\
+\textbf{Teilnehmer} \\
+Beschreibt teilnehmende Klassen und Objekte sowie deren Abhängigkeiten. \\ \\
+\textbf{Interaktionen} \\
+Wie arbeiten die Teilnehmer zusammen, um das Problem zu lösen? \\ \\
+\textbf{Konsequenzen} \\
+Diskutiert Vor- und Nachteile und beschreibt was von diesem Pattern zu erwarten ist. Außerdem wird hier angegeben, welche Teile der Systemstruktur unabhängig voneinander variiert werden können. \\ \\
+\textbf{Implementierung} \\
+Adressiert Fallen, Tips oder Techniken zur Implementierung des Patterns. \\ \\
+\textbf{Beispielcode} \\
+Codefragmente von \textit{C++} oder \textit{Smalltalk} zur Veranschaulichung. \\ \\
+\textbf{Bekannte Verwendungen} \\
+Zeigt Beispiele für das Pattern auf, die in echten Systemen zu finden sind. \\ \\
+\textbf{Verwandte Muster} \\
+Diskutiert relevante Unterschiede zu ähnlichen Patterns und gibt an, mit welchen anderen Patterns eine gute Harmonie.
+\section{Klassifizierung von Design Patterns}\label{se:Klassifizierung}
 
 \begin{table}[H]
 	\caption{Ketegorisierung von Mustern nach ihrer Aufgabe. Vgl. \cite[S. 14]{gamma2004}}\label{ta:Klassifizierung}
@@ -139,7 +162,7 @@ Zu erwähnen bleibt trotzdem, dass sich Muster auch auf andere Weisen klassifizi
 
 \subsection{Erzeugungsmuster}\label{se:Erzeugungsmuster}
 
-Erzeugungsmuster dienen, wie der Name erahnen lässt, zur Erzeugung von Objekten. Man verwendet sie, um das Wissen der im System verwendeten Klassen zu kapseln. Die Anwendung kennt nur den für sie relevanten Anteil der erzeugten Objekte, nämlich den, der über die Erzeuger-Schnittstelle nach außen sichtbar ist. Über Produktionsobjekte lassen sich statisch oder zur Laufzeit Produktionen konfigurieren und somit beliebig komplizierte Erzeugungsprozesse nach außen hin verstecken. Das System wird dadurch unabhängig davon, wie es seine Objekte erzeugt, zusammensetzt oder repräsentiert. 
+Erzeugungsmuster dienen, wie der Name erahnen lässt, zur Erzeugung von Objekten. Man verwendet sie, um das Wissen der im System verwendeten Klassen zu kapseln. Die Anwendung soll nur den für sie relevanten Anteil der erzeugten Objekte kennen, nämlich den, der über die Erzeuger-Schnittstelle nach außen sichtbar ist. Über Produktionsobjekte lassen sich statisch oder zur Laufzeit Produktionen konfigurieren und somit beliebig komplizierte Erzeugungsprozesse nach außen hin verstecken. Das System wird dadurch unabhängig davon, wie es seine Objekte erzeugt, zusammensetzt oder repräsentiert. 
 \\
 Erzeugungsmuster werden dann besonders hilfreich, wenn Abhängigkeiten zwischen Klassen vor allem durch Kompositionen und nicht durch Vererbung definiert sind. Vgl. \cite[S. 101]{gamma2004}
 
@@ -216,9 +239,7 @@ Das Konzept des Musters ist sehr einfach und lässt sich schnell umsetzen. Ein B
 Das Konzept der Muster wurde vor allem von Christopher Alexander geprägt. Seine Bücher zu Mustern in Gebäude und Städtebau können heute als Klassiker bezeichnet werden, die nach wie vor große Bedeutung tragen. Muster haben sich in vielen anderen Bereichen, auch abseits der Architektur, durchgesetzt. Dieses Kapitel soll die Idee Alexanders vorstellen, ihre Umsetzung in der Gebäude-, und Städtearchitektur kurz beleuchten und als Beispiel für die Reichweite seiner Werke das vergleichsweise neue Konzept der bekannten Anti-Patterns vermitteln.
 
 \section{Die Idee des Musters nach Christopher Alexander}
-Alexander1977
-
-
+\cite{Alexander1977}
 
 \subsection{Muster in der Gebäude- und Stadtarchitektur}
 
@@ -235,9 +256,18 @@ Auch wenn das von Christopher Alexander etablierte Konzept der Muster einen gro�
 \section{Anti-Pattern}
 Anti-Pattern drehen das Vorgehen für den Entwickler um, indem sie zeigen, wie man es am besten nicht machen sollte. Sie bilden somit das genaue Gegenstück zu den Mustern. Diese Pattern beschränken sich keineswegs nur auf die Entwicklung von Software, sondern haben Ausläufer in viele verschiedene Bereiche, darunter z.B. Architektur, Organisation oder Management. \cite{AntiPatternsCatalog}
 
-\chapter{Design Patterns heute}\label{se:Design Patterns heute}
+\chapter{Nutzen von Design Patterns heute}\label{se:Design Patterns heute}
 
-%Design Patterns haben bis heute nichts von ihrer Relevanz verloren. Das Gegenteil ist der Fall, sie sind aus dem objektorientierten Entwurf nichtmehr weg zu denken.
+Design Patterns haben bis heute nichts von ihrer Relevanz verloren. Das Gegenteil ist der Fall, sie sind aus dem objektorientierten Entwurf nicht mehr weg zu denken. Design Patterns liefern sie nach wie vor viele Vorteile vgl. \cite{Gamma1993}:
+\begin{itemize}
+	\item Für Entwickler sind sie ein wichtiges Werkzeug, das ihnen hilft Entwürfe zu kommunizieren oder Entwurfs-Alternativen zu finden.
+	\item Sie reduzieren die Systemkomplexität, indem sie Abstraktionen definieren, die über Klassen und Instanzen stehen.
+	\item Sie bilden eine Basis von erprobten Lösungsschemata, die es dem Entwickler auch heute noch sehr hilft, wiederverwendbare Software zu produzieren.
+	\item Sie destillieren erprobte Erkenntnisse des Softwareentwurfs von erfahrenen Entwicklern und bilden so Bausteine, die es ermöglichen, komplexe Gesamtsysteme zu erzeugen.
+	\item Sie helfen dem Entwickler die Einarbeitungszeit in existierende Klassenbibliotheken zu reduzieren. Sind die Design Patterns innerhalb der Klassenbibliothek erst einmal verstanden, hilft sie dabei andere Bibliotheken schneller zu verstehen.
+	\item Design Patterns unterstützen den Entwickler dabei, Reorganisationen oder Refaktorisierungen einfacher und schneller durchzuführen.
+\end{itemize}
+   
 
 \newpage
 \bibliography{literatur}
