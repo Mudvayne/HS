@@ -236,12 +236,31 @@ Will man mehrere Algorithmen zu einer bestimmten Problemstellung kapseln und aus
 Das Konzept des Musters ist sehr einfach und lässt sich schnell umsetzen. Ein Beispiel mit drei konkreten Algorithmen ist in Abbildung \ref{fig:Strategie} zu sehen. Der Kontext, der die Strategie nach außen an seine Klienten anbietet, hält ein Objekt des Typs Strategie vor und ist in Besitz alle für die Algorithmen notwendigen Daten. Eine Strategie ist wiederum die Schnittstelle für konkrete Strategien, welche wiederum jeweils eine andere (austauschbare) Variante eines Algorithmus implementieren. Damit wird eine Entkopplung der Algorithmen und der Klassen die sie benötigen hergestellt. Natürlich muss dafür der konkrete Algorithmus für die Auswahl, bei der anwendenden Klasse bekannt sein. Eine Möglichkeit die Algorithmen mit Eingabedaten zu versorgen wäre, indem sich der Kontext selbst der Strategie übergibt. Die Strategie kann dann je nach Bedarf selbst auf die von ihr benötigten Daten zurückgreifen.
 
 \chapter{Herkunft und Reichweite}\label{Muster}
-Das Konzept der Muster wurde vor allem von Christopher Alexander geprägt. Seine Bücher zu Mustern in Gebäude und Städtebau können heute als Klassiker bezeichnet werden, die nach wie vor große Bedeutung tragen. Muster haben sich in vielen anderen Bereichen, auch abseits der Architektur, durchgesetzt. Dieses Kapitel soll die Idee Alexanders vorstellen, ihre Umsetzung in der Gebäude-, und Städtearchitektur kurz beleuchten und als Beispiel für die Reichweite seiner Werke das vergleichsweise neue Konzept der bekannten Anti-Patterns vermitteln.
+Das Konzept der Muster wurde vor allem von Christopher Alexander geprägt. Seine Bücher zu Mustern in Gebäude und Städtebau können heute als Klassiker bezeichnet werden, die nach wie von großer Bedeutung sind. \\ \\ 
+Er wurde 1936 in Wien geboren, wuchs aber in England auf. Er studierte an der University of Cambridge Mathematik und Architektur. Promoviert wurde er an der Harvard University. Später lehrte er an der University of California Architektur und gründete das Institut für Stadt- und Raumplanung (\textit{Center for Enviromental Structure}).\\ \\
+Muster haben sich in vielen anderen Bereichen, auch abseits der Architektur, durchgesetzt. Dieses Kapitel soll die Idee Alexanders vorstellen, ihre Umsetzung in der Gebäude-, und Städtearchitektur kurz beleuchten und als weiteres Beispiel für die Reichweite seiner Werke das vergleichsweise neue Konzept der bekannten Anti-Patterns vermitteln.
 
 \section{Die Idee des Musters nach Christopher Alexander}
-\cite{Alexander1977}
+Christopher Alexander beschreibt seine Konzepte rund um Patterns in der Architektur. Seine Bücher sind an vielen Stellen philosophisch geprägt, denn neben seinen Architektur- und Systemtheoretischen Leistungen beschäftigt er sich in diesem Zusammenhang auch mit der Philosophie der Architektur. Dieses Kapitel widmet sich einigen wichtigen Errungenschaften, die er in den Büchern \textit{The Timeless Way of Building} \cite{Alexander1975} und \textit{A Pattern Language} \cite{Alexander1977} beschreibt. \\ \\
+Alexander sieht in der Welt bereits vor seiner Arbeit viele verschiedene Patterns. Er unterscheidet hier zwei elementare Arten von Pattern, nämlich \textit{Pattern of Events}, und \textit{Patterns of Space}. \\
+Erstere beschreiben wiederkehrende Ereignisse und können nur schwer geplant oder erzeugt werden, aber sie beleben die Orte, an denen sie geschehen. Der Charakter eines Gebäudes oder einer Stadt wird seiner Ansicht nach zu großen Teilen davon bestimmt, was dort passiert.  \\
+\textit{Patterns of Space} hingegen beschreiben sich wiederholende Muster im Raum. Nach Alexander besteht jedes Gebäude und jede Stadt ausschließlich aus einer Sammlung von Mustern. Selbst die kleinsten Teile wie Moleküle oder Atome, aus denen alles besteht, folgen seiner Ansicht nach bestimmten Patterns. \\ 
+Er betont, dass die Wiederholung der Bausteine nicht immer daraus bestehen muss, genau diesen Baustein erneut zu verwenden. Zum Beispiel hat ein Haus an einigen, vom Muster bestimmten Stellen Fenster. Die Art der Fenster kann aber durchaus variieren. Demnach kommt er zu dem Schluss, dass das, was sich eigentlich wiederholt, nicht die Bausteine an sich sind, sondern die Beziehungen zwischen diesen Bausteinen. Diese Beziehung beschreibt er wie folgt:
+\begin{center}
+	$ X \rightarrow r(A, B, ...) $
+\end{center}
+Das bedeutet, innerhalb eines Kontext des Typs $X$, stehen alle Teile $A, B, ...$ in Beziehung $r$ zueinander. Zum Beispiel bedeutet:
+\begin{center}
+	gotische Kathedrale $\rightarrow$ $flankiert($Hauptschiff$,$ Seitenschiff$)$,
+\end{center}
+dass das Hauptschiff von Seitenschiffen flankiert ist. Und genau das ist es, was sich in gotischen Kathedralen tatsächlich wiederholt. Konkrete Hauptschiffe und konkrete Seitenschiffe sind selbstverständlich in verschiedenen Kathedralen verschieden, nicht aber die Art und Weise, wie sie zusammenspielen. Denn genau diese Art des Zusammenspiels, macht eine gotische Kathedrale zu einer gotischen Kathedrale. Natürlich Teilen sich alle gotischen Kathedralen neben den Zusammenspiel ihrer Teile auch einen gewissen Stil, der wiederum durch Pattern beschrieben werden kann. 
 
-\subsection{Muster in der Gebäude- und Stadtarchitektur}
+
+\subsection{Die Mustersprache nach Alexander}
+Die gesamte Buchtrilogie von Alexander begründet sich auf seine Idee einer universellen Mustersprache. \cite[S. 177 - ???]{Alexander1975}
+
+\subsection{Beispiel: Muster in der Gebäude- und Stadtarchitektur}
+A Pattern Language Einleitung \cite[S. IX - XLIV]{Alexander1977}
 
 \subsection{Unterschiede zu Gammas Arbeit}
 Auch wenn das von Christopher Alexander etablierte Konzept der Muster einen großen Einfluß auf viele andere Bereiche hatte, finden sich insbesondere zu Gammas Veröffentlichungen einige Unterschiede: Vgl. \cite[S. 438 - 439]{gamma2004}
