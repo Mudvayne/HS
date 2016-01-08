@@ -60,7 +60,7 @@
 \footnotetext[1]{$https://www.microsoft.com/italy/futuredecoded/$}
 Erich Gamma wurde am 13. März 1961 in Zürich geboren und ist ein vergleichsweise sehr junger Pionier der Informatik. Er promovierte an der Universität Zürich in Informatik. Danach arbeitete er zunächst als Software-Ingenieur bei \textit{UBILAB}, einem Forschungslabor der \textit{Schweizerischen Bankgesellschaft} (heute \textit{UBS}) und anschließend bei \textit{Taligent}. Bekannt wurde er vor allem als Mitautor des Buches \textit{Design Patterns – Elements of Reusable Object-Oriented Software} \cite{gamma2004}. Das Buch entstand im Zuge seiner Dissertation gemeinsam mit Richard Helm, Ralph Johnson und John Vlissides. Vgl. \cite{ErichGammaWikiDe} \\ \\
 Der Titel des Buches wurde in einiger Hinsicht als zu lang erachtet, deshalb wurde der kurze und prägnante Titel: Das Buch der Viererbande (engl.: Gang of Four, kurz: GoF) als Synonym etabliert vgl. \cite{GangOfFour}. Zusammen mit allen Mitglieder der \textit{GoF} erhielt er 2006 den Dahl-Nygaard-Preis, welcher für herausragende berufliche Leistungen im Bereich der Softwareentwicklung von der \textit{Association Internationale pour les Technologies Objets} vergeben wird vgl. \cite{Dahl-Nygaard-Preis}. \\ \\
-Gamma war Initiator der offenen Entwicklungsumgebung Eclipse und hat deren Entwicklung ursprünglich geleitet. Außerdem war er einer der Hauptentwickler von \textit{ET++}, einer portablen \textit{C++}-Klassenbibliothek für interaktive grafische Anwendungen. Er war als Distinguished Engineer bei \textit{Rational Software}, eingestellt. \textit{Rational Software} ist eine Abteilung der \textit{IBM Software Group} in Zürich, welche sich schwerpunktmäßig mit System-, und Analysedesign beschäftigt. Er arbeitete dort am Projekt \textit{Jazz / Rational Team Concert}. Relativ überraschend wechselte er im August 2011 zur Microsoft Corporation für die er wieder als Distinguished Engineer tätig ist. Er leitet dort bis heute ein Team, das unterstützend an der Produktion der\textit{ Microsoft}-Entwicklungsumgebung \textit{Microsoft Visual Studio} mitwirkt. Vgl. \cite{ErichGammaWikiDe}
+Gamma war Initiator der offenen Entwicklungsumgebung Eclipse und hat deren Entwicklung ursprünglich geleitet. Außerdem war er einer der Hauptentwickler von \textit{ET++}, einer portablen \textit{C++}-Klassenbibliothek für interaktive grafische Anwendungen. Zusammen mit Kent Beck implementierte er \textit{JUnit} für \textit{Java}. Er war als Distinguished Engineer bei \textit{Rational Software}, eingestellt. \textit{Rational Software} ist eine Abteilung der \textit{IBM Software Group} in Zürich, welche sich schwerpunktmäßig mit System-, und Analysedesign beschäftigt. Er arbeitete dort am Projekt \textit{Jazz / Rational Team Concert}. Relativ überraschend wechselte er im August 2011 zur Microsoft Corporation für die er wieder als Distinguished Engineer tätig ist. Er leitet dort bis heute ein Team, das unterstützend an der Produktion der\textit{ Microsoft}-Entwicklungsumgebung \textit{Microsoft Visual Studio} mitwirkt. Vgl. \cite{ErichGammaWikiDe}
 
 \chapter{Historische Leistung: Design Patterns}\label{se:Historische Leistung: Design Patterns}
 Die deutsche Bezeichnung von Design Patterns ist Entwurfs Muster. Ein Muster ist im Allgemeinen eine gleichbleibende Struktur, in einer sich wiederholenden Sache. Da Muster auch wiederkehrende Denk- oder Verhaltensweisen sein können, ist die Bezeichnung Design Patterns treffend, denn sie bieten immer gleich bleibende Lösungsstrukturen für verschiedene Problemtypen im objektorierntierten Softwareentwurf.
@@ -126,7 +126,7 @@ Codefragmente von \textit{C++} oder \textit{Smalltalk} zur Veranschaulichung. \\
 \textbf{Bekannte Verwendungen} \\
 Zeigt Beispiele für das Pattern auf, die in echten Systemen zu finden sind. \\ \\
 \textbf{Verwandte Muster} \\
-Diskutiert relevante Unterschiede zu ähnlichen Patterns und gibt an, mit welchen anderen Patterns eine gute Harmonie.
+Diskutiert relevante Unterschiede zu ähnlichen Patterns und gibt an, mit welchen anderen Patterns eine gute Harmonie entstehen kann.
 \section{Klassifizierung von Design Patterns}\label{se:Klassifizierung}
 
 \begin{table}[H]
@@ -235,17 +235,16 @@ Will man mehrere Algorithmen zu einer bestimmten Problemstellung kapseln und aus
 \ \\
 Das Konzept des Musters ist sehr einfach und lässt sich schnell umsetzen. Ein Beispiel mit drei konkreten Algorithmen ist in Abbildung \ref{fig:Strategie} zu sehen. Der Kontext, der die Strategie nach außen an seine Klienten anbietet, hält ein Objekt des Typs Strategie vor und ist in Besitz alle für die Algorithmen notwendigen Daten. Eine Strategie ist wiederum die Schnittstelle für konkrete Strategien, welche wiederum jeweils eine andere (austauschbare) Variante eines Algorithmus implementieren. Damit wird eine Entkopplung der Algorithmen und der Klassen die sie benötigen hergestellt. Natürlich muss dafür der konkrete Algorithmus für die Auswahl, bei der anwendenden Klasse bekannt sein. Eine Möglichkeit die Algorithmen mit Eingabedaten zu versorgen wäre, indem sich der Kontext selbst der Strategie übergibt. Die Strategie kann dann je nach Bedarf selbst auf die von ihr benötigten Daten zurückgreifen.
 
-\chapter{Herkunft und Reichweite}\label{Muster}
+\chapter{Die Idee des Musters nach Christopher Alexander}\label{Muster}
 Das Konzept der Muster wurde vor allem von Christopher Alexander geprägt. Seine Bücher zu Mustern in Gebäude und Städtebau können heute als Klassiker bezeichnet werden, die nach wie von großer Bedeutung sind. \\ \\ 
-Er wurde 1936 in Wien geboren, wuchs aber in England auf. Er studierte an der University of Cambridge Mathematik und Architektur. Promoviert wurde er an der Harvard University. Später lehrte er an der University of California Architektur und gründete das Institut für Stadt- und Raumplanung (\textit{Center for Enviromental Structure}).\\ \\
-Muster haben sich in vielen anderen Bereichen, auch abseits der Architektur, durchgesetzt. Dieses Kapitel soll die Idee Alexanders vorstellen, ihre Umsetzung in der Gebäude-, und Städtearchitektur kurz beleuchten und als weiteres Beispiel für die Reichweite seiner Werke das vergleichsweise neue Konzept der bekannten Anti-Patterns vermitteln.
-
-\section{Die Idee des Musters nach Christopher Alexander}
-Christopher Alexander beschreibt seine Konzepte rund um Patterns in der Architektur. Seine Bücher sind an vielen Stellen philosophisch geprägt, denn neben seinen Architektur- und Systemtheoretischen Leistungen beschäftigt er sich in diesem Zusammenhang auch mit der Philosophie der Architektur. Dieses Kapitel widmet sich einigen wichtigen Errungenschaften, die er in den Büchern \textit{The Timeless Way of Building} \cite{Alexander1975} und \textit{A Pattern Language} \cite{Alexander1977} beschreibt. \\ \\
+Er wurde 1936 in Wien geboren, wuchs aber in England auf. Er studierte an der University of Cambridge Mathematik und Architektur. Promoviert wurde er an der Harvard University. Später lehrte er an der University of California Architektur und gründete das Institut für Stadt- und Raumplanung (\textit{Center for Enviromental Structure}). Vgl. \cite{ChristopherAlexanderWikiDe}\\ \\
+Muster haben sich in vielen anderen Bereichen, auch abseits der Architektur, durchgesetzt. Dieses Kapitel soll die Idee Alexanders vorstellen, ihre Umsetzung in der Gebäude-, und Städtearchitektur kurz beleuchten und aufzeigen, welche Reichweite seine Idee hat. \\ \\
+Alexander beschreibt seine Konzepte rund um Patterns im Kontext der Architektur. Seine Bücher sind an vielen Stellen philosophisch geprägt, denn neben seinen Architektur- und Systemtheoretischen Leistungen beschäftigt er sich in diesem Zusammenhang auch mit der Philosophie der Architektur. Dieses Kapitel widmet sich einigen wichtigen Errungenschaften, die er in den Büchern \textit{The Timeless Way of Building} \cite{Alexander1975} und \textit{A Pattern Language} \cite{Alexander1977} beschreibt. \\ \\
+\section{Muster}
 Alexander sieht in der Welt bereits vor seiner Arbeit viele verschiedene Patterns. Er unterscheidet hier zwei elementare Arten von Pattern, nämlich \textit{Pattern of Events}, und \textit{Patterns of Space}. \\
 Erstere beschreiben wiederkehrende Ereignisse und können nur schwer geplant oder erzeugt werden, aber sie beleben die Orte, an denen sie geschehen. Der Charakter eines Gebäudes oder einer Stadt wird seiner Ansicht nach zu großen Teilen davon bestimmt, was dort passiert.  \\
 \textit{Patterns of Space} hingegen beschreiben sich wiederholende Muster im Raum. Nach Alexander besteht jedes Gebäude und jede Stadt ausschließlich aus einer Sammlung von Mustern. Selbst die kleinsten Teile wie Moleküle oder Atome, aus denen alles besteht, folgen seiner Ansicht nach bestimmten Patterns. \\ 
-Er betont, dass die Wiederholung der Bausteine nicht immer daraus bestehen muss, genau diesen Baustein erneut zu verwenden. Zum Beispiel hat ein Haus an einigen, vom Muster bestimmten Stellen Fenster. Die Art der Fenster kann aber durchaus variieren. Demnach kommt er zu dem Schluss, dass das, was sich eigentlich wiederholt, nicht die Bausteine an sich sind, sondern die Beziehungen zwischen diesen Bausteinen. Diese Beziehung beschreibt er wie folgt:
+Er betont, dass die Wiederholung der Bausteine nicht immer daraus bestehen muss, genau diesen Baustein erneut zu verwenden. Wenn dem so ist, können Bausteine nicht die elementaren Bestandteile des Raums sein. Zum Beispiel hat ein Haus an einigen Stellen, die vom Muster bestimmt sind Fenster. Die Art der Fenster kann aber durchaus variieren. Demnach kommt er zu dem Schluss, dass das, was sich eigentlich wiederholt, nicht die Bausteine an sich sind, sondern die Beziehungen zwischen diesen Bausteinen. Diese Beziehung beschreibt er wie folgt:
 \begin{center}
 	$ X \rightarrow r(A, B, ...) $
 \end{center}
@@ -253,16 +252,85 @@ Das bedeutet, innerhalb eines Kontext des Typs $X$, stehen alle Teile $A, B, ...
 \begin{center}
 	gotische Kathedrale $\rightarrow$ $flankiert($Hauptschiff$,$ Seitenschiff$)$,
 \end{center}
-dass das Hauptschiff von Seitenschiffen flankiert ist. Und genau das ist es, was sich in gotischen Kathedralen tatsächlich wiederholt. Konkrete Hauptschiffe und konkrete Seitenschiffe sind selbstverständlich in verschiedenen Kathedralen verschieden, nicht aber die Art und Weise, wie sie zusammenspielen. Denn genau diese Art des Zusammenspiels, macht eine gotische Kathedrale zu einer gotischen Kathedrale. Natürlich Teilen sich alle gotischen Kathedralen neben den Zusammenspiel ihrer Teile auch einen gewissen Stil, der wiederum durch Pattern beschrieben werden kann. 
+dass das Hauptschiff von Seitenschiffen flankiert ist. Und genau das ist es, was sich in gotischen Kathedralen tatsächlich wiederholt. Konkrete Hauptschiffe und konkrete Seitenschiffe sind selbstverständlich in verschiedenen Kathedralen verschieden, nicht aber die Art und Weise, wie sie zusammenspielen. Denn genau diese Art des Zusammenspiels der einzelnen Bausteine, macht eine gotische Kathedrale zu einer gotischen Kathedrale, und stellt somit einen ganz wesentlichen Teil der Struktur dar. Vgl. \cite[S. 55 - 122]{Alexander1979}
 
 
-\subsection{Die Mustersprache nach Alexander}
-Die gesamte Buchtrilogie von Alexander begründet sich auf seine Idee einer universellen Mustersprache. \cite[S. 177 - ???]{Alexander1975}
+\section{Die Mustersprache}
+Die gesamte Buchtrilogie von Alexander begründet sich auf seine Idee einer universellen Mustersprache. Dieses Kapitel beleuchtet einige Kernaussagen des zweiten Buchs der Trilogie vgl. \cite[S. IX - XLIV]{Alexander1977}. \\ \\
+Sprachen bestehen aus Wörtern, grammatikalischen Regeln und Sätzen. Die Wörter der von Alexander entworfenen Sprache sind die Muster selbst, die ähnlich wie bei Gamma in einem Katalog veröffentlicht sind. Dieser Katalog beinhaltet 253 Muster für Gebäude und Städte. Die grammatikalischen Regeln der Sprache sind spezielle Muster, die Verbindungen zwischen Mustern herstellen. Ganze Sätze sind festgelegte Reihenfolgen von Wörtern und grammatikalischen Regeln, die zusammen Gebäude oder Orte bilden. Diese Sprache ist laut Alexander im höchsten Maße praxisbezogen und begründet sich auf 8 Jahre Planungserfahrung. \\ \\
+Alexander wendet sich mit seinen Büchern nicht nur an gelerntes Personal, sondern legt  nahe, dass seine universelle Mustersprache von Jedermann verwendet werden könne. Zum Beispiel schlägt er vor, mit seinem Nachbarn zusammenzuarbeiten, um seine Stadt oder Nachbarschaft zu verbessern. Außerdem könne die Sprache auch eingesetzt werden, um das eigene Haus, ein Büro oder eine Werkstatt zusammen mit anderen Menschen zu planen. Die Problemlösungen, die von den Mustern angeboten werden, können mithilfe dieser Sprache millionenfach angewandt werden, ohne sich je zu wiederholen. \\ \\
+Ähnlich wie später Gamma, ordnet auch Alexander seine Muster. Die ersten Muster des Katalogs sind die größten und beziehen sich auf ganze Regionen. Dann folgen sukzessive weitere Muster die sich in einer linearen Abfolge auf immer kleinere Bereiche beziehen. Die kleinsten Muster widmen sich beispielsweise verschiedenen Stühlen oder Zimmerpflanzen. Ein Satz in Alexanders Mustersprache behält diese lineare Ordnung mehr oder weniger bei, weil die Lösung des Problems immer von groß nach klein erfolgt. \\ \\
+Bei Alexander ist keines der Muster eine echte abgetrennte Einheit. Kleinere Muster sind in größere eingebettet, größere beinhalten kleinere, und gleichgroße Muster sind voneinander umgeben und arbeiten zusammen. Auch bei Gamma finden sich viele Beziehungen zwischen seinen Mustern. So verwaltet z.B. das Beobachter Muster seine Abhängigkeiten oft über das Vermittler Muster vgl. \cite[S. 16]{gamma2004}. \\ \\
+Alexander legt bei der Definition seiner Muster großen Wert darauf, niemanden eine konkrete Lösung aufzuzwingen. Die Lösung enthält deshalb nur die Punkte, die seiner Ansicht nach bei einer wirklichen Lösung nicht umgangen werden können, also die Merkmale, die überall dort vorliegen, wo das Problem gelöst worden ist. Jedes der von Alexander entworfenen Muster ist darüber hinaus mit einer Wertung, oder, wenn man so will, einer  Selbsteinschätzung versehen. Diese soll nicht aussagen, ob ein Muster gut oder schlecht ist, sondern ob es zur vorgeschlagenen Lösung möglicherweise Alternativen gibt, die genauso funktionieren können. Diese Wertung soll anhand einer Skala von 0 - 2 Sternen Folgendes aussagen:
+\begin{itemize}
+	\item \textbf{2 Sterne:} Eine echte Invariante. Die Lösung fasst alle Merkmale zusammen, die in allen möglichen Arten das Problem zu lösen, gemeinsam sind. Kurz: Für eine richtige Lösung des Problems, sind alle Merkmale des Musters unversichtbar.
+	\item \textbf{1 Stern:} Das Muster ist dem Ziel der Definition einer echten Invariante nahe gekommen. Bei sorgfältiger Arbeit ist die Lösung aber verbesserbar. Alexander rät bereits hier zu einer gewissen Skepsis.
+	\item \textbf{0 Sterne:} Alexander geht davon aus, dass es ihm nicht gelungen ist eine echte Invariante zu definieren und im Gegenteil mit Sicherheit andere Lösungen des Problems existieren, als die angegebene. Ziel der Muster mit keinen Sternen ist es, dem Leser zumindest \textit{einen} Weg zu zeigen, das Problem zu lösen.
+\end{itemize}
 
-\subsection{Beispiel: Muster in der Gebäude- und Stadtarchitektur}
-A Pattern Language Einleitung \cite[S. IX - XLIV]{Alexander1977}
+\section{Beispiel: Planen einer Veranda}
+Um zu erklären, wie man die Sprache anwenden kann, bietet sich ein Kleinbeispiel an: Die Planung einer Veranda, mithilfe der Muster im Katalog. Auf detaillierte Inhalte der jeweiligen Muster wird nicht eingegangen, das würde den Rahmen dieser Arbeit sprengen. Zum Verständnis reicht das Wissen um die Reihenfolge und Art und Weise der Anwendung. \\ \\
 
-\subsection{Unterschiede zu Gammas Arbeit}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\ScaleIfNeeded]{Bilder/Terasse.png}
+	\caption{Verhältnis von Straße, Haus und Terrasse}
+	\quelle{ \cite[S. 667]{Alexander1977}}
+	\label{fig:Terasse}
+\end{figure} \ \\
+Als erstes wir eine passende großmaßstäbliche Struktur ausgewählt. Hier bietet sich 
+\begin{center}
+	\textit{140. PRIVATE TERRACE ON THE STREET**}
+\end{center} an (siehe Abbildung \ref{fig:Terasse}). Dieses Muster schlägt eine vernünftige Lage einer Terrasse im Verhältnis zur anliegenden Straße vor. Als nächstes soll gewährleistet werden, dass der Platz sonnig und windgeschützt ist. Hierfür kann das Muster
+\begin{center}
+	\textit{161. SUNNY PLACE**}
+\end{center}
+genutzt werden. Vielleicht soll die Veranda in einen Balkon übergehen, dann kann das Muster
+\begin{center}
+	\textit{167. SIX-FOOT BALCONY**}
+\end{center}
+herangezogen werden. Für die Möblierung der Veranda bieten sich zum Abschluss folgende Muster an:
+\begin{center}
+	\textit{241. SEAT SPOTS**} \\
+	\textit{251. DIFFERENT CHAIRS}	
+\end{center}
+Diese Abfolge von Mustern ist ein Satz, der eine Veranda beschreibt. Dies ist nur ein kleines Beispiel, eine Sprache für eine allgemeine Veranda, mit unzähligen verschiedenen Umsetzungen könnte so aussehen: 
+\begin{center}
+\textit{140. PRIVATE TERRACE ON THE STREET} \\
+\textit{161. SUNNY PLACE} \\
+\textit{163. OUTDOOR ROOM} \\
+\textit{161. SIX-FOOT BALCONY} \\
+\textit{120. PATHS AND GOALS} \\
+\textit{161. SIX-FOOT BALCONY} \\
+\textit{190. CEILING HEIGHT VARIETY} \\
+\textit{212. COLUMNS AT THE CORNERS} \\
+\textit{241. SEAT SPOTS} \\
+\textit{245. RAISED FLOWERS} \\
+\textit{251. DIFFERENT CHAIRS}
+\end{center}
+
+
+\section{Wirkung}
+Softwareentwicklung - Design Patterns (siehe oben), Extreme Programming \\
+Musik - Jazz Patterns, Blues Patterns \\
+Kommunikationssysteme - Wiki \\
+Lebensraumgestaltung - Permakultur \\
+Pädagogik/Didaktik - Pedagogical Patterns, Educational Patterns \\
+Human Computer Interface (HCI) Design - Web Design \\
+Organisationsentwicklung - Innovationsprozesse \\
+Projektmanagement - speziell in Softwareprojekten \\
+Sozialaktivismus - Liberating Voices Patterns \\
+\subsection{Musik}
+
+\subsection{Kommunikationssysteme}
+\subsection{Pädagogik und Didaktik}
+
+\subsection{Antipattern}
+Anti-Pattern drehen das Vorgehen für den Entwickler um, indem sie zeigen, wie man es am besten nicht machen sollte. Sie bilden somit das genaue Gegenstück zu den Mustern. Diese Pattern beschränken sich keineswegs nur auf die Entwicklung von Software, sondern haben Ausläufer in viele verschiedene Bereiche, darunter z.B. Architektur, Organisation oder Management. \cite{AntiPatternsCatalog}
+
+\subsection{Weitere}
+
+\section{Unterschiede zu Gammas Arbeit}
 Auch wenn das von Christopher Alexander etablierte Konzept der Muster einen großen Einfluß auf viele andere Bereiche hatte, finden sich insbesondere zu Gammas Veröffentlichungen einige Unterschiede: Vgl. \cite[S. 438 - 439]{gamma2004}
 
 \begin{enumerate} 
@@ -271,9 +339,6 @@ Auch wenn das von Christopher Alexander etablierte Konzept der Muster einen gro�
 \item Ein weiterer Unterschied ist die Herangehensweise. Alexander betont die von ihm adressierten Probleme, Gamma konzentriert sich dagegen mehr auf Lösungen.
 \item Der letzte wirklich große Unterschied zu Gamma ist, dass Alexander behauptet, dass seine Muster vollständige Gebäude erzeugen können. Gamma erhebt nicht den Anspruch darauf, dass seine Muster vollständige Programme erzeugen können.
 \end{enumerate}
-
-\section{Anti-Pattern}
-Anti-Pattern drehen das Vorgehen für den Entwickler um, indem sie zeigen, wie man es am besten nicht machen sollte. Sie bilden somit das genaue Gegenstück zu den Mustern. Diese Pattern beschränken sich keineswegs nur auf die Entwicklung von Software, sondern haben Ausläufer in viele verschiedene Bereiche, darunter z.B. Architektur, Organisation oder Management. \cite{AntiPatternsCatalog}
 
 \chapter{Nutzen von Design Patterns heute}\label{se:Design Patterns heute}
 
