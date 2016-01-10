@@ -59,11 +59,11 @@
 \end{floatingfigure}
 \footnotetext[1]{$https://www.microsoft.com/italy/futuredecoded/$}
 Erich Gamma wurde am 13. März 1961 in Zürich geboren und ist damit ein vergleichsweise junger Pionier der Informatik. Er promovierte an der Universität Zürich in Informatik. Danach arbeitete er zunächst als Software-Ingenieur bei \textit{UBILAB}, einem Forschungslabor der \textit{Schweizerischen Bankgesellschaft} (heute \textit{UBS}) und anschließend bei \textit{Taligent}. Bekannt wurde er vor allem als Mitautor des Buches \textit{Design Patterns – Elements of Reusable Object-Oriented Software} \cite{gamma2004}. Das Buch entstand im Zuge seiner Dissertation gemeinsam mit Richard Helm, Ralph Johnson und John Vlissides. Vgl. \cite{ErichGammaWikiDe} \\ \\
-Der Titel des Buches wurde in einiger Hinsicht als zu lang erachtet, deshalb wurde der kurze und prägnante Titel: Das Buch der Viererbande (engl.: Gang of Four, kurz: GoF) als Synonym etabliert vgl. \cite{GangOfFour}. Zusammen mit allen Mitglieder der \textit{GoF} erhielt er 2006 den Dahl-Nygaard-Preis, welcher für herausragende berufliche Leistungen im Bereich der Softwareentwicklung von der \textit{Association Internationale pour les Technologies Objets} vergeben wird vgl. \cite{Dahl-Nygaard-Preis}. \\ \\
-Gamma war Initiator der offenen Entwicklungsumgebung Eclipse und hat deren Entwicklung ursprünglich geleitet. Außerdem war er einer der Hauptentwickler von \textit{ET++}, einer portablen \textit{C++} -Klassenbibliothek für interaktive grafische Anwendungen. Zusammen mit Kent Beck implementierte er \textit{JUnit} für \textit{Java}. Er war als Distinguished Engineer bei \textit{Rational Software}, eingestellt. \textit{Rational Software} ist eine Abteilung der \textit{IBM Software Group} in Zürich, welche sich schwerpunktmäßig mit System-, und Analysedesign beschäftigt. Er arbeitete dort am Projekt \textit{Jazz / Rational Team Concert}. Relativ überraschend wechselte er im August 2011 zur Microsoft Corporation für die er wieder als Distinguished Engineer tätig ist. Er leitet dort bis heute ein Team, das unterstützend an der Produktion der\textit{ Microsoft}-Entwicklungsumgebung \textit{Microsoft Visual Studio} mitwirkt. Vgl. \cite{ErichGammaWikiDe}
+Der Titel des Buches wurde in einiger Hinsicht als zu lang erachtet, deshalb wurde der kurze und prägnante Titel: \glqq Das Buch der Viererbande\grqq{} (engl.: Gang of Four, kurz: GoF) als Synonym etabliert vgl. \cite{GangOfFour}. Zusammen mit allen Mitglieder der \textit{GoF} erhielt er 2006 den Dahl-Nygaard-Preis, welcher für herausragende berufliche Leistungen im Bereich der Softwareentwicklung von der \textit{Association Internationale pour les Technologies Objets} vergeben wird vgl. \cite{Dahl-Nygaard-Preis}. \\ \\
+Gamma war Initiator der offenen Entwicklungsumgebung Eclipse und hat deren Entwicklung ursprünglich geleitet. Außerdem war er einer der Hauptentwickler von \textit{ET++}, einer portablen \textit{C++} -Klassenbibliothek für interaktive grafische Anwendungen. Zusammen mit Kent Beck implementierte er \textit{JUnit} für \textit{Java}. Er war als Distinguished Engineer bei \textit{Rational Software}, eingestellt. \textit{Rational Software} ist eine Abteilung der \textit{IBM Software Group} in Zürich, welche sich schwerpunktmäßig mit System- und Analysedesign beschäftigt. Er arbeitete dort am Projekt \textit{Jazz / Rational Team Concert}. Relativ überraschend wechselte er im August 2011 zur Microsoft Corporation, für die er wieder als Distinguished Engineer tätig ist. Er leitet dort bis heute ein Team, das unterstützend an der Produktion der\textit{ Microsoft}-Entwicklungsumgebung \textit{Microsoft Visual Studio} mitwirkt. Vgl. \cite{ErichGammaWikiDe}
 
 \chapter{Historische Leistung: Design Patterns}\label{se:Historische Leistung: Design Patterns}
-Die deutsche Bezeichnung von Design Patterns ist Entwurfs Muster. Ein Muster ist im Allgemeinen eine gleichbleibende Struktur, in einer sich wiederholenden Sache. Da Muster auch wiederkehrende Denk- oder Verhaltensweisen sein können, ist die Bezeichnung Design Patterns sehr treffend, denn sie bieten immer gleich bleibende Lösungsstrukturen für verschiedene Problemtypen im objektorierntierten Softwareentwurf.
+Die deutsche Bezeichnung von Design Patterns ist Entwurfs Muster. Ein Muster ist im Allgemeinen eine gleichbleibende Struktur, in einer sich wiederholenden Sache. Da Muster auch wiederkehrende Denk- oder Verhaltensweisen sein können, ist die Bezeichnung Design Patterns sehr treffend, denn sie bieten immer gleich bleibende Lösungsstrukturen für verschiedene Problemtypen im objektorientierten Softwareentwurf.
 \\ \\
 Die Idee von Mustern wurde schon vor der Software Entwicklung in anderen Disziplinen als äußerst nützlich erkannt. Der Architekt \mbox{Christopher} \mbox{Alexander} begann bereits 1975 mit der Veröffentlichung seiner Buchtrilogie: \textit{A Pattern Language} \cite{Alexander1979}, \textit{A Timeless Way of Building} \cite{Alexander1977} und \textit{The Oregon Experiment} \cite{Alexander1975}. Damit legte er lange vor der digitalen Revolution den Grundstein für eine allgemeine Definition von Mustern. Seine Werke stellen einen allgemeinen Ansatz zur Beschreibung von Mustern vor, konzentrieren sich aber im Konkreten auf Architektur- und Stadtplanung. Auf die Arbeit von Christopher Alexander soll in Kapitel \ref{Muster} näher eingegangen werden.
 
@@ -71,13 +71,13 @@ Die Idee von Mustern wurde schon vor der Software Entwicklung in anderen Diszipl
 
 Ein großes Ziel der objektorientierten Softwareentwicklung ist die Erzeugung von wiederverwendbaren Teilen. Vor Gammas Arbeit\footnote{Hier und im Folgenden wird häufig von \glqq Gammas Arbeit\grqq{} gesprochen. Das kann den Eindruck erwecken, dass es sich um seinen alleinigen Verdienst handle. Natürlich ist in diesem Zusammenhang immer die Gesamtleistung aller Autoren des Buches \textit{Design Patterns – Elements of Reusable Object-Oriented Software} \cite{gamma2004} gemeint.} war der Design-Teil davon aber meistens ausgegrenzt. Es gab einfach kein universelles Werkzeug, um Designs wiederverwendbar zu machen.
 \\ \\
-Einen von Anfang an wiederverwendbaren und flexiblen Entwurf zu erstellen, kann sehr schwierig sein. Ein häufiges Abändern oder Revidieren von Entwürfen ist die Folge. Erich Gamma hat hier ein wichtiges Problem erkannt. Er sah die Tendenz, dass wiederkehrende Probleme immer wieder von Grund auf neu angegangen wurden. Das kostet Zeit und schafft viel Raum für Fehler. Vgl. \cite[S. 1]{gamma2004}
+Einen von Anfang an wiederverwendbaren und flexiblen Entwurf zu erstellen, kann sehr schwierig sein. Ein häufiges Abändern oder Revidieren von Entwürfen ist die Folge. Erich Gamma hat hier ein wichtiges Problem erkannt. Er sah die Tendenz, dass wiederkehrende Probleme immer wieder von Grund auf neu angegangen wurden. Das kostete Zeit und schuf viel Raum für Fehler. Vgl. \cite[S. 1]{gamma2004}
 \\ \\
 Erich Gamma wollte die Vorteile von Mustern auf den großen Bereich des objektorientierten Software Entwurfs ausweiten und adaptierte die Idee in diesen Bereich.
 
 \section{Lösungsansatz}\label{se:Lösungsansatz}
 
-Die Lösung des Problems ist ebenso einfach wie genial. Wurde ein Problem eines bestimmten Typs bereits einmal gelöst, kann das Konzept der Lösung in den meisten Fällen auch auf ähnliche Probleme angewandt werden.
+Die Lösung des Problems ist ebenso einfach wie genial: Wurde ein Problem eines bestimmten Typs bereits einmal gelöst, kann das Konzept der Lösung in den meisten Fällen auch auf ähnliche Probleme angewandt werden.
 \\ \\
 Verschiedene Probleme erfordern verschiedene konkrete Lösungen, auch wenn sich die Art des Problems gleicht. Design Patterns abstrahieren Lösungen zu wiederkehrenden Problemen, um sie universell einsetzbar zu machen. Die konkreten Umsetzungen eines Musters können (und müssen) sich daher unterscheiden, jedoch teilt jede Umsetzung die Herangehensweise des zu Grunde liegenden abstrakt definierten Musters.
 \\ \\
@@ -85,7 +85,7 @@ Als Grundlage für Design Patterns mussten einige Bestandteile von objektorienti
 
 \chapter{Design Patterns im Detail}\label{se:Design Patterns im Detail}
 Der Unterschied zu den von Christopher Alexander vorgestellten Mustern ist, dass es sich beim objektorientierten Entwurf eben nicht um Türen und Wände, sondern um Objekte und Schnittstellen handelt vgl. \cite[S. 3]{gamma2004}.
-Aus der Architektursicht schließen Design Patterns die Lücke zwischen Klassenbibliotheken und Frameworks. Dabei haben sie weniger Architekturelemente als ein Framework, sind dabei aber auch abstrakter. Letzteres hat wiederum den Vorteil, dass sie nicht auf bestimmte Programmiersprachen beschränkt sind. \\ \\
+Aus Sicht der Softwarearchitektur schließen Design Patterns die Lücke zwischen Klassenbibliotheken und Frameworks. Dabei haben sie weniger Architekturelemente als ein Framework, sind dabei aber auch abstrakter. Letzteres hat wiederum den Vorteil, dass sie nicht auf bestimmte Programmiersprachen beschränkt sind. \\ \\
 Nach \cite[S. 4]{gamma2004} sind Design Patterns 
 
 \begin{quote}
@@ -100,9 +100,9 @@ Ein Design Pattern besteht dabei aus drei grundlegenden Teilen vgl. \cite{Gamma1
 \end{enumerate}	
 
 \section{Beschreibung von Design Patterns}\label{se:Beschreibung von Design Patterns}
-Um einen Entwurf wiederverwendbar zu machen, reicht es nicht aus, sich ausschließlich auf grafische Notationen zu verlassen. Diese sind zwar wichtig, sagen aber z.B. nichts über mögliche Alternativen oder Vor- und Nachteile aus. Gamma wählte deshalb für sein Buch ein einheitliches Schema zur Beschreibung von Patterns aus vgl. \cite[S. 8-10]{gamma2004}: \\ \\
+Um einen Entwurf wiederverwendbar zu machen, reicht es nicht aus, sich ausschließlich auf grafische Notationen zu verlassen. Diese sind zwar wichtig, sagen aber z.B. nichts über mögliche Alternativen oder Vor- und Nachteile aus. Gamma wählte deshalb für sein Buch ein einheitliches Schema zur Beschreibung von Mustern aus vgl. \cite[S. 8-10]{gamma2004}: \\ \\
 \textbf{Mustername und Klassifizierung} \\
-Soll knapp und präzise den wesentlichen Gehalt des Patterns vermitteln. \\ \\
+Soll knapp und präzise den wesentlichen Gehalt des Musters vermitteln. \\ \\
 \textbf{Zweck} \\
 Was macht das Muster? Welchen Grundprinzip folgt es und welchem Zweck dient es? \\
 \newpage \noindent 
@@ -113,7 +113,7 @@ Beschreibt ein mögliches Szenario für den Einsatz dieses Musters, also welches
 \textbf{Anwendbarkeit} \\
 In welchen Problemsituationen kann das Muster sinnvoll eingesetzt werden? Dieser Abschnitt hilft dem Entwickler dabei, solche Situationen zu identifizieren. \\ \\
 \textbf{Struktur} \\
-Hier findet die grafische Repräsentation der beteiligten Klassen und Objekte und deren Zusammenspiel in Form von Struktur-, und Interaktionsdiagrammen ihren Platz. \\ \\
+Hier findet die grafische Repräsentation der beteiligten Klassen und Objekte und deren Zusammenspiel in Form von Struktur- und Interaktionsdiagrammen ihren Platz. \\ \\
 \textbf{Teilnehmer} \\
 Beschreibt teilnehmende Klassen und Objekte sowie deren Abhängigkeiten. \\ \\
 \textbf{Interaktionen} \\
@@ -131,7 +131,7 @@ Diskutiert relevante Unterschiede zu ähnlichen Mustern und gibt an, mit welchen
 \section{Klassifizierung von Design Patterns}\label{se:Klassifizierung}
 
 \begin{table}[H]
-	\caption{Ketegorisierung von Mustern nach ihrer Aufgabe. Vgl. \cite[S. 14]{gamma2004}}\label{ta:Klassifizierung}
+	\caption{Kategorisierung von Mustern nach ihrer Aufgabe. Vgl. \cite[S. 14]{gamma2004}}\label{ta:Klassifizierung}
 	\begin{center}
 		\begin{tabular}{|l|l|l|}
 			\hline
@@ -156,10 +156,10 @@ Diskutiert relevante Unterschiede zu ähnlichen Mustern und gibt an, mit welchen
 	\end{center}
 \end{table}
 
-Muster können anhand ihrer Aufgabe unterteilt werden (siehe Tabelle \ref{ta:Klassifizierung}). Diese kann \textbf{ erzeugend},\textbf{ strukturorientiert} oder \textbf{verhaltensorientiert} sein. Ein weiteres Kriterium ist der Gültigkeitsbereich eines Musters. Dieser sagt aus, ob sich ein Muster primär auf Objekte oder auf Klassen bezieht.
+Muster können anhand ihrer Aufgabe unterteilt werden (siehe Tabelle \ref{ta:Klassifizierung}). Diese kann \textbf{erzeugend},\textbf{ strukturorientiert} oder \textbf{verhaltensorientiert} sein. Ein weiteres Kriterium ist der Gültigkeitsbereich eines Musters. Dieser sagt aus, ob sich ein Muster primär auf Objekte oder auf Klassen bezieht.
 Dieses Kapitel befasst sich primär mit der Klassifizierung nach der Muster Aufgabe. Diese sollen jeweils beschrieben und im folgenden Kapitel jeweils mit einem typischen Beispielmuster vorgestellt werden. 
 \\ \\
-Zu erwähnen bleibt, dass sich Muster auch auf andere Weisen klassifizieren lassen. Beispielsweise können oft zusammen benutzte Muster oder Alternativ-Muster zu einem gegebenen Problem gebündelt werden. Vgl. \cite[S. 14]{gamma2004}
+Zu erwähnen bleibt, dass sich Muster auch auf andere Weisen klassifizieren lassen. Beispielsweise können oft zusammen genutzte Muster oder Alternativ-Muster zu einem gegebenen Problem gebündelt werden. Vgl. \cite[S. 14]{gamma2004}
 
 \subsection{Erzeugungsmuster}\label{se:Erzeugungsmuster}
 
@@ -178,7 +178,7 @@ Klassenbasierte Verhaltensmuster greifen auf Vererbung zurück, um Funktionalit�
 Objektbasierte Verhaltensmuster verwenden stattdessen Objektkomposition (z.B. durch Aggregation). Viele von Erich Gamma vorgestellten objektbasierte Verhaltensmuster beschreiben, wie Gruppen von Objekten an einer Aufgabe beteiligt sind, die keines der teilnehmenden Objekte alleine lösen könnte. Ein Muster muss somit die Abhängigkeiten der einzelnen Objekte auf sinnvolle Weise festlegen. Vgl. \cite[S. 271]{gamma2004}
 
 \section{Beispiele}
-In diesem Kapitel wird für jede der drei Klassifizierungsansätzen ein typisches von \mbox{Gamma} vorgestelltes Beispielmuster im Detail beschrieben.
+In diesem Kapitel wird für jede der drei Klassifizierungsansätze ein typisches von \mbox{Gamma} vorgestelltes Beispielmuster im Detail beschrieben.
 
 \subsection{Beispiel für Erzeugungsmuster: Abstrakte Fabrik}
 
@@ -192,14 +192,14 @@ Ein klassisches Erzeugungsmuster ist die Abstrakte Fabrik. Zweck des Musters ist
 	\label{fig:Abstrakte_Fabrik}
 \end{figure}
 \ \\
-Abbildung \ref{fig:Abstrakte_Fabrik} zeigt das Konzept des Musters. In diesem Beispiel gibt es zwei abstrakte Produkte, mit wiederum jeweils zwei konkreten Ausprägungen. Der Klient kennt nur die abstrakte Fabrik, die hier die Schnittstelle zweier konkreter Fabriken ist, sowie die beiden abstrakten Produkte. Und genau so findet die Entkopplung statt; Der Klient manipuliert Objekte nur über ihre abstrakten Schnittstellen. Die Interaktion mit Produkten findet somit über Schnittstellen statt, konkrete Produkte muss er nicht kennen. Konkrete Fabriken werden normalerweise zur Laufzeit erzeugt. Diese muss der Klient natürlich kennen, damit er verschiedene Produktobjekte erzeugen kann. \\
-Dieses Muster bietet sich vor Allem dann an, wenn zu erwarten ist, dass zu einem späteren Zeitpunkt keine weiteren Produkte mehr hinzukommen. Weil die Schnittstelle der Fabrik festlegt, welche Produkte hergestellt werden können, müssten diese um das neue Produkt erweitert werden. Das hat die Folge, dass auch alle konkreten Fabriken überarbeitet werden müssen. Eine Erweiterung innerhalb der Produktfamilien kann sich also als schwierig herausstellen. Vgl. \cite[S. 109-111]{gamma2004}
+Abbildung \ref{fig:Abstrakte_Fabrik} zeigt das Konzept des Musters. In diesem Beispiel gibt es zwei abstrakte Produkte mit wiederum jeweils zwei konkreten Ausprägungen. Der Klient kennt nur die abstrakte Fabrik, die hier die Schnittstelle zweier konkreter Fabriken ist sowie die beiden abstrakten Produkte. Und genau so findet die Entkopplung statt; der Klient manipuliert Objekte nur über ihre abstrakten Schnittstellen. Die Interaktion mit Produkten findet somit über Schnittstellen statt, konkrete Produkte muss er nicht kennen. Konkrete Fabriken werden normalerweise zur Laufzeit erzeugt. Diese muss der Klient natürlich kennen, damit er verschiedene Produktobjekte erzeugen kann. \\
+Dieses Muster bietet sich vor allem dann an, wenn zu erwarten ist, dass zu einem späteren Zeitpunkt keine weiteren Produkte mehr hinzukommen. Weil die Schnittstelle der Fabrik festlegt, welche Produkte hergestellt werden können, müssten diese um das neue Produkt erweitert werden. Das hat die Folge, dass auch alle konkreten Fabriken überarbeitet werden müssen. Eine Erweiterung innerhalb der Produktfamilien kann sich also als schwierig herausstellen. Vgl. \cite[S. 109-111]{gamma2004}
 
 \subsection{Beispiel für Strukturmuster: Dekorierer}
 
-Manchmal kann es sinnvoll sein, die Funktionalitäten eines Objekts zu erweitern, ohne dabei die Klasse zu verändern. Eine Lösung dafür wäre Vererbung. Vererbung stellt sich in diesem Fall aber als unflexibel heraus, weil die Auswahl der vererbenden Klasse statisch, also nicht beliebig austauschbar ist. Vlg. \cite[S. 199]{gamma2004}
+Manchmal kann es sinnvoll sein, die Funktionalitäten eines Objekts zu erweitern, ohne dabei die Klasse zu verändern. Eine Lösung dafür wäre Vererbung. Vererbung stellt sich in diesem Fall aber als unflexibel heraus, da die Auswahl der vererbenden Klasse statisch, also nicht beliebig austauschbar ist. Vlg. \cite[S. 199]{gamma2004}
 \\ \\
-Als Lösung für dieses Problem bietet sich ein häufig eingesetztes objektbasiertes Strukturmuster, nämlich das Dekorierer Muster an. Zweck des Musters ist es, Klassen dynamisch mit zusätzlichen Informationen und Funktionalitäten anzureichern. Das Muster stellt in vielen Fällen eine flexible Alternative zur Vererbung dar. Vgl. \cite[S. 199 ]{gamma2004}
+Als Lösung für dieses Problem bietet sich ein häufig eingesetztes, objektbasiertes Strukturmuster, nämlich das Dekorierer Muster an. Zweck des Musters ist es, Klassen dynamisch mit zusätzlichen Informationen und Funktionalitäten anzureichern. Das Muster stellt in vielen Fällen eine flexible Alternative zur Vererbung dar. Vgl. \cite[S. 199 ]{gamma2004}
 
 \begin{figure}[H]
 	\centering
@@ -219,7 +219,7 @@ Als Lösung für dieses Problem bietet sich ein häufig eingesetztes objektbasie
 \ \\
 Der Aufbau des Musters ist in Abbildung \ref{fig:Dekorierer} dargestellt. Jede konkrete Komponente und jeder Dekorierer erben von einer abstrakten Basis-Komponente. Die Grundidee des Musters zeigt sich im Dekorierer. Er hält eine weitere Komponente vor, die wiederum eine konkrete Komponente oder aber ein weiterer Dekorierer sein kann. So können beliebig lange Ketten gebildet werden (siehe Abbildung \ref{fig:Beispiel einer dekorierten Komponente}). Bestehende Strukturen werden mit neuen Informationen \glqq dekoriert\grqq. Dekorierer wiederum können verschiedene konkrete Ausprägungen besitzen, die zum Beispiel zusätzliche Zustände oder weitere Funktionen hinzufügen.
 \\ \\
-Dieses Muster ermöglicht es außerdem, dass Objekte erst zur Laufzeit mit Informationen angereichert werden können. Im direkten Vergleich mit klassischer Mehrfachvererbung bietet dieses Muster eine deutlich größere Flexibilität und hält dabei die Komplexität des Systems im Verhältnis klein. Bei einer äquivalenten Lösung mittels Mehrfachvererbung, muss für jede zusätzliche Funktionalität eine weitere Klasse erzeugt werden. Ein mehrfaches Hinzufügen der gleichen Information ist ebenso möglich, wie ein Mischen von Funktionen, was wiederum mit Mehrfachvererbung schwer lösbar ist und bestenfalls als fehleranfällig bezeichnet werden kann. Vgl. \cite[S. 203]{gamma2004}
+Dieses Muster ermöglicht es außerdem, dass Objekte erst zur Laufzeit mit Informationen angereichert werden können. Im direkten Vergleich mit klassischer Mehrfachvererbung bietet dieses Muster eine deutlich größere Flexibilität und hält dabei die Komplexität des Systems im Verhältnis klein. Bei einer äquivalenten Lösung mittels Mehrfachvererbung muss für jede zusätzliche Funktionalität eine weitere Klasse erzeugt werden. Ein mehrfaches Hinzufügen der gleichen Information ist ebenso möglich, wie ein Mischen von Funktionen, was wiederum mit Mehrfachvererbung schwer lösbar ist und bestenfalls als fehleranfällig bezeichnet werden kann. Vgl. \cite[S. 203]{gamma2004}
 \\ \\
 Es macht Sinn die Basiskomponente nicht mit Funktionalität zu überfrachten. Sie sollte nur die Funktionalität bieten, die alle (auch in Zukunft hinzukommenden) Komponenten besitzen sollen. Individualität der Komponenten wird durch weitere konkrete Dekorierer ermöglicht. Vgl. \cite[S. 203 - 204]{gamma2004}
 
@@ -234,12 +234,12 @@ Will man mehrere Algorithmen zu einer bestimmten Problemstellung kapseln und aus
 	\label{fig:Strategie}
 \end{figure}
 \ \\
-Das Konzept des Musters ist sehr einfach und lässt sich schnell umsetzen. Ein Beispiel mit drei konkreten Algorithmen ist in Abbildung \ref{fig:Strategie} zu sehen. Der Kontext, der die Strategie nach außen an seine Klienten anbietet, hält ein Objekt des Typs Strategie vor und ist in Besitz aller für die Algorithmen notwendigen Daten. Eine Strategie ist Schnittstelle für konkrete Strategien, welche wiederum jeweils eine andere (austauschbare) Variante eines Algorithmus implementieren. Damit wird eine Entkopplung der Algorithmen und der Klassen die sie benötigen hergestellt. Natürlich muss dafür der konkrete Algorithmus für die Auswahl, bei der anwendenden Klasse bekannt sein. Eine Möglichkeit die Algorithmen mit Eingabedaten zu versorgen, wäre, indem sich der Kontext selbst der Strategie übergibt. Die Strategie kann dann je nach Bedarf selbst auf die von ihr benötigten Daten zurückgreifen. Vgl. \cite[S. 373 - 384]{gamma2004}
+Das Konzept des Musters ist sehr einfach und lässt sich schnell umsetzen. Ein Beispiel mit drei konkreten Algorithmen ist in Abbildung \ref{fig:Strategie} zu sehen. Der Kontext, der die Strategie nach außen an seine Klienten anbietet, hält ein Objekt des Typs Strategie vor und ist in Besitz aller für die Algorithmen notwendigen Daten. Eine Strategie ist Schnittstelle für konkrete Strategien, welche wiederum jeweils eine andere (austauschbare) Variante eines Algorithmus implementieren. Damit wird eine Entkopplung der Algorithmen und der Klassen, die sie benötigen, sichergestellt. Natürlich muss dafür der konkrete Algorithmus für die Auswahl bei der anwendenden Klasse bekannt sein. Eine Möglichkeit die Algorithmen mit Eingabedaten zu versorgen, wäre, indem sich der Kontext selbst der Strategie übergibt. Die Strategie kann dann je nach Bedarf selbst auf die von ihr benötigten Daten zurückgreifen. Vgl. \cite[S. 373 - 384]{gamma2004}
 
 \section{Zusammenfassung der Vorteile von Design Patterns}
 Zusammenfassend lässt sich feststellen, dass Design Patterns viele verschiedene Vorteile für die Entwicklung von Software bieten vgl. \cite{Gamma1993}:
 \begin{itemize}
-	\item Für Entwickler sind sie ein wichtiges Werkzeug, das ihnen hilft Entwürfe zu kommunizieren oder Entwurfs-Alternativen zu finden.
+	\item Für Entwickler sind sie ein wichtiges Werkzeug, das ihnen hilft, Entwürfe zu kommunizieren oder Entwurfs-Alternativen zu finden.
 	\item Sie reduzieren die Systemkomplexität, indem sie Abstraktionen definieren, die über Klassen und Instanzen stehen.
 	\item Sie bilden eine Basis von erprobten Lösungsschemata, die es dem Entwickler erleichtern, wiederverwendbare Software zu produzieren.
 	\item Sie destillieren erprobte Erkenntnisse des Softwareentwurfs von erfahrenen Entwicklern und bilden so Bausteine, die es ermöglichen, komplexe Gesamtsysteme zu erzeugen.
@@ -256,7 +256,7 @@ Alexander beschreibt seine Konzepte rund um Muster im Kontext der Architektur. S
 Alexander sieht in der Welt bereits vor seiner Arbeit viele verschiedene Muster. Er unterscheidet hier zwei elementare Arten von Mustern, nämlich \textit{Pattern of Events}, und \textit{Patterns of Space}. \\
 Erstere beschreiben wiederkehrende Ereignisse und können nur schwer geplant oder erzeugt werden, aber sie beleben die Orte, an denen sie geschehen. Der Charakter eines Gebäudes oder einer Stadt wird seiner Ansicht nach zu großen Teilen davon bestimmt, was dort passiert.  \\
 \textit{Patterns of Space} hingegen beschreiben sich wiederholende Muster im Raum. Nach Alexander besteht jedes Gebäude und jede Stadt ausschließlich aus einer Sammlung von Mustern. Selbst die kleinsten Teile wie Moleküle oder Atome, aus denen alles besteht, folgen seiner Ansicht nach bestimmten Mustern. \\ 
-Er betont, dass die Wiederholung der Bausteine nicht immer daraus bestehen muss, genau diesen Baustein erneut zu verwenden. Wenn dem so ist, können Bausteine nicht die elementaren Bestandteile des Raums sein. Zum Beispiel hat ein Haus an einigen Stellen, die vom Muster bestimmt sind Fenster. Die Art der Fenster kann aber durchaus variieren. Demnach kommt er zu dem Schluss, dass das, was sich eigentlich wiederholt, nicht die Bausteine selbst, sondern die Beziehungen zwischen diesen Bausteinen sind. Diese Beziehung beschreibt er wie folgt:
+Er betont, dass die Wiederholung nicht immer daraus bestehen muss, genau diesen Baustein erneut zu verwenden. Wenn dem so ist, können Bausteine nicht die elementaren Bestandteile des Raumes sein. Zum Beispiel hat ein Haus an einigen Stellen, die vom Muster bestimmt sind, Fenster. Die Art der Fenster kann aber durchaus variieren. Demnach kommt er zu dem Schluss, dass das, was sich eigentlich wiederholt, nicht die Bausteine selbst, sondern die Beziehungen zwischen diesen Bausteinen sind. Diese Beziehung beschreibt er wie folgt:
 \begin{center}
 	$ X \rightarrow r(A, B, ...) $
 \end{center}
@@ -264,18 +264,18 @@ Das bedeutet, innerhalb eines Kontext des Typs $X$, stehen alle Teile $A, B, ...
 \begin{center}
 	gotische Kathedrale $\rightarrow$ $flankiert($Hauptschiff$,$ Seitenschiff$)$,
 \end{center}
-dass das Hauptschiff einer gotischen Kathedrale von Seitenschiffen flankiert ist. Und genau das ist es, was sich bei gotischen Kathedralen tatsächlich wiederholt. Konkrete Hauptschiffe und konkrete Seitenschiffe sind selbstverständlich in verschiedenen Kathedralen verschieden, nicht aber die Art und Weise, wie sie zusammenspielen. Denn genau diese Art des Zusammenspiels der einzelnen Bausteine, macht eine gotische Kathedrale zu einer gotischen Kathedrale und stellt somit einen ganz wesentlichen Teil der Struktur dar. Vgl. \cite[S. 55 - 122]{Alexander1979}
+dass das Hauptschiff einer gotischen Kathedrale von Seitenschiffen flankiert ist. Und genau das ist es, was sich bei gotischen Kathedralen tatsächlich wiederholt. Konkrete Hauptschiffe und konkrete Seitenschiffe sind selbstverständlich in unterschiedlichen Kathedralen verschieden, nicht aber die Art und Weise wie sie zusammenspielen. Denn genau diese Art des Zusammenspiels der einzelnen Bausteine macht eine gotische Kathedrale zu einer gotischen Kathedrale und stellt somit einen ganz wesentlichen Teil der Struktur dar. Vgl. \cite[S. 55 - 122]{Alexander1979}
 
 
 \section{Die Mustersprache}
 Die gesamte Buchtrilogie von Alexander begründet sich auf seiner Idee einer universellen Mustersprache. Dieses Kapitel beleuchtet einige Kernaussagen des zweiten Buchs der Trilogie vgl. \cite[S. IX - XLIV]{Alexander1977}. \\ \\
-Sprachen bestehen aus Wörtern, grammatikalischen Regeln und Sätzen. Die Wörter der von Alexander entworfenen Sprache sind die Muster selbst, die ähnlich wie bei Gamma in einem Katalog veröffentlicht sind. Dieser Katalog beinhaltet 253 Muster für Gebäude und Städte. Die grammatikalischen Regeln der Sprache sind spezielle Muster, die Verbindungen zwischen Mustern herstellen. Ganze Sätze sind festgelegte Reihenfolgen von Wörtern und grammatikalischen Regeln, die zusammen Gebäude oder Orte bilden. Diese Sprache ist laut Alexander im höchsten Maße praxisbezogen und begründet sich auf 8 Jahre Planungserfahrung. \\ \\
+Sprachen bestehen aus Wörtern, grammatikalischen Regeln und Sätzen. Die Wörter der von Alexander entworfenen Sprache sind die Muster selbst, die ähnlich wie bei Gamma, in einem Katalog veröffentlicht sind. Dieser Katalog beinhaltet 253 Muster für Gebäude und Städte. Die grammatikalischen Regeln der Sprache sind spezielle Muster, die Verbindungen zwischen Mustern herstellen. Ganze Sätze sind festgelegte Reihenfolgen von Wörtern und grammatikalischen Regeln, die zusammen Gebäude oder Orte bilden. Diese Sprache ist laut Alexander im höchsten Maße praxisbezogen und begründet sich auf 8 Jahre Planungserfahrung. \\ \\
 Alexander wendet sich mit seinen Büchern nicht nur an gelerntes Personal, sondern legt  nahe, dass seine universelle Mustersprache von Jedermann verwendet werden könne. Zum Beispiel schlägt er vor, mit seinem Nachbarn zusammenzuarbeiten, um seine Stadt oder Nachbarschaft zu verbessern. Außerdem könne die Sprache auch eingesetzt werden, um das eigene Haus, ein Büro oder eine Werkstatt zusammen mit anderen Menschen zu planen. Die Problemlösungen, die von den Mustern angeboten werden, können mithilfe dieser Sprache millionenfach angewandt werden, ohne sich jemals zu wiederholen. \\ \\
 Ähnlich wie später Gamma, ordnet auch Alexander seine Muster. Die ersten Muster des Katalogs sind die größten und beziehen sich auf ganze Regionen. Dann folgen sukzessive weitere Muster, die sich in einer linearen Abfolge auf immer kleinere Bereiche beziehen. Die kleinsten Muster widmen sich beispielsweise verschiedenen Stühlen oder Zimmerpflanzen. Ein Satz in Alexanders Mustersprache behält diese lineare Ordnung mehr oder weniger bei, weil die Lösung des Problems immer von groß nach klein erfolgt. \\ \\
-Bei Alexander ist keines der Muster eine echte abgetrennte Einheit. Kleinere Muster sind in größere eingebettet, größere beinhalten kleinere, und gleichgroße Muster sind voneinander umgeben und arbeiten zusammen. Auch bei Gamma finden sich viele Beziehungen zwischen seinen Mustern. So verwaltet z.B. das Beobachter Muster seine Abhängigkeiten oft über das Vermittler Muster vgl. \cite[S. 16]{gamma2004}. \\ \\
-Alexander legt bei der Definition seiner Muster großen Wert darauf, niemanden eine konkrete Lösung aufzuzwingen. Die Lösung enthält deshalb nur die Punkte, die seiner Ansicht nach bei einer wirklichen Lösung nicht umgangen werden können, also die Merkmale, die überall dort vorliegen, wo das Problem gelöst worden ist. Jedes der von Alexander entworfenen Muster ist darüber hinaus mit einer Wertung, oder, wenn man so will, einer  Selbsteinschätzung versehen. Diese soll nicht aussagen, ob ein Muster gut oder schlecht ist, sondern ob es zur vorgeschlagenen Lösung möglicherweise Alternativen gibt, die genauso funktionieren können. Diese Wertung soll anhand einer Skala von 0 - 2 Sternen Folgendes aussagen:
+Bei Alexander ist keines der Muster eine echte, abgetrennte Einheit. Kleinere Muster sind in größere eingebettet, größere beinhalten kleinere, und gleichgroße Muster sind voneinander umgeben und arbeiten zusammen. Auch bei Gamma finden sich viele Beziehungen zwischen seinen Mustern. So verwaltet z.B. das Beobachter Muster seine Abhängigkeiten oft über das Vermittler Muster vgl. \cite[S. 16]{gamma2004}. \\ \\
+Alexander legt bei der Definition seiner Muster großen Wert darauf, niemanden eine konkrete Lösung aufzuzwingen. Die Lösung enthält deshalb nur die Punkte, die seiner Ansicht nach bei einer wirklichen Lösung nicht umgangen werden können, also die Merkmale, die überall dort vorliegen, wo das Problem gelöst worden ist. Jedes der von Alexander entworfenen Muster ist darüber hinaus mit einer Wertung oder, wenn man so will, einer  Selbsteinschätzung versehen. Diese soll nicht aussagen, ob ein Muster gut oder schlecht ist, sondern ob es zur vorgeschlagenen Lösung möglicherweise Alternativen gibt, die genauso funktionieren können. Diese Wertung soll anhand einer Skala von 0 - 2 Sternen folgendes aussagen:
 \begin{itemize}
-	\item \textbf{2 Sterne:} Eine echte Invariante. Die Lösung fasst alle Merkmale zusammen, die in allen möglichen Arten das Problem zu lösen, gemeinsam sind. Kurz: Für eine richtige Lösung des Problems, sind alle Merkmale des Musters unversichtbar.
+	\item \textbf{2 Sterne:} Eine echte Invariante: Die Lösung fasst alle Merkmale zusammen, die in allen möglichen Arten das Problem zu lösen, gemeinsam sind. Kurz: Für eine richtige Lösung des Problems, sind alle Merkmale des Musters unverzichtbar.
 	\item \textbf{1 Stern:} Das Muster ist dem Ziel der Definition einer echten Invariante nahe gekommen. Bei sorgfältiger Arbeit ist die Lösung aber verbesserbar. Alexander rät bereits hier zu einer gewissen Skepsis.
 	\item \textbf{0 Sterne:} Alexander geht davon aus, dass es ihm nicht gelungen ist, eine echte Invariante zu definieren und im Gegenteil mit Sicherheit andere Lösungen des Problems existieren, als die angegebene. Ziel der Muster mit keinen Sternen ist es, dem Leser zumindest \textit{einen} Weg zu zeigen, das Problem zu lösen.
 \end{itemize}
@@ -306,7 +306,7 @@ herangezogen werden. Für die Möblierung der Veranda bieten sich zum Abschluss 
 	\textit{241. SEAT SPOTS**} \\
 	\textit{251. DIFFERENT CHAIRS}	
 \end{center}
-Dies ist nur ein kleines Beispiel für die Anwendung weniger Muster, die zusammen dabei helfen eine Veranda zu planen. Eine Sprache für eine allgemeine Veranda, mit unzähligen verschiedenen Umsetzungen könnte so aussehen: 
+Dies ist nur ein kleines Beispiel für die Anwendung weniger Muster, die zusammen dabei helfen eine Veranda zu planen. Eine Sprache für eine allgemeine Veranda mit unzähligen verschiedenen Umsetzungen könnte so aussehen: 
 \begin{center}
 \textit{140. PRIVATE TERRACE ON THE STREET} \\
 \textit{161. SUNNY PLACE} \\
@@ -322,9 +322,9 @@ Dies ist nur ein kleines Beispiel für die Anwendung weniger Muster, die zusamme
 \end{center}
 
 \section{Wirkung}
-Alexanders Arbeit hatte neben Erich Gammas Design Patterns im objektorientierten Softwareentwurf, auch Einfluss auf viele andere im höchstem Grade unterschiedliche Bereiche. Zum Beispiel auf die Musik mit Jazz Patterns, auf Pedagogik mit pedagogical Patterns, auf Management von Softwareprojekten, auf die Umgebungsgestaltung mittels Feng Shui oder auf Brettspiele wie z.B. Schach mit Eröffnungszügen. Zwei weiterer stark von Alexander beeinflusste Teilbereiche der Informatik sind das Design von Benutzerschnittstellen und Antipattern in der Softwareentwicklung. Letztere werden im Folgenden kurz beleuchtet. \\ \\
+Alexanders Arbeit hatte neben Erich Gammas Design Patterns im objektorientierten Softwareentwurf auch Einfluss auf viele andere im höchstem Grade unterschiedliche Bereiche. Zum Beispiel auf die Musik mit Jazz Patterns, auf Pedagogik mit pedagogical Patterns, auf Management von Softwareprojekten, auf die Umgebungsgestaltung mittels Feng Shui oder auf Brettspiele wie z.B. Schach mit Eröffnungszügen. Zwei weitere stark von Alexander beeinflusste Teilbereiche der Informatik sind der Entwurf von Benutzerschnittstellen und Antipattern in der Softwareentwicklung. Letztere werden im Folgenden kurz beleuchtet. \\ \\
 \textbf{Beispiel: Antipattern} \\ \\
-Anti-Pattern drehen das Vorgehen für den Entwickler um, indem sie zeigen, wie man es am besten nicht machen sollte. Sie bilden somit das genaue Gegenstück zu den Mustern. Als Beispiele werden die Antipattern \textit{The Blob} und \textit{Poltergeist} beschrieben. \newpage
+Antipattern drehen das Vorgehen für den Entwickler um, indem sie zeigen, wie man es am besten nicht machen sollte. Sie bilden somit das genaue Gegenstück zu den Mustern. Als Beispiele werden die Antipattern \textit{The Blob} und \textit{Poltergeist} beschrieben. \newpage
 \textbf{The Blob \cite[S. 42 - 48]{Brown1998}}
 
 \begin{figure}[H]
@@ -350,7 +350,7 @@ Das Antipattern Poltergeist zeichnet sich dadurch aus, dass es eine oder mehrere
 	\quelle{vgl. \cite[S. 59]{Brown1998}}
 	\label{fig:Poltergeist}
 \end{figure} \ \\
-Abbildung \ref{fig:Poltergeist} zeigt ein einfaches Beispiel. Die Klasse \glqq Peach canner controller\grqq{} ist ein \textit{Poltergeist}, weil sie redundante Navigationspfade zu allen anderen Klassen im System besitzt, keinen Zustand hat und einen sehr kurzen Lebenszyklus aufweist, in dem sie nur auftaucht, um temporär etwas in anderen Klassen anzustoßen. Solche Klassen verschwenden jedes mal Ressourcen, wenn sie auftauchen, sind wegen der redundanten Pfade ineffizient und stehen dem ordentlichen objektorientierten Design im Wege, weil sie das Objektmodell unnötigerweise zerstückeln. 
+Abbildung \ref{fig:Poltergeist} zeigt ein einfaches Beispiel. Die Klasse \glqq Peach canner controller\grqq{} ist ein \textit{Poltergeist}, weil sie redundante Navigationspfade zu allen anderen Klassen im System besitzt, keinen Zustand hat und einen sehr kurzen Lebenszyklus aufweist, in dem sie nur auftaucht, um temporär etwas in anderen Klassen anzustoßen. Solche Klassen verschwenden jedes mal Ressourcen, wenn sie auftauchen, sind wegen der redundanten Pfade ineffizient und stehen dem ordentlichen, objektorientierten Design im Wege, weil sie das Objektmodell unnötigerweise zerstückeln. 
 
 \begin{figure}[H]
 	\centering
@@ -365,15 +365,15 @@ Abbildung \ref{fig:Poltergeist2} zeigt, wie man es besser machen sollte.
 Auch wenn das von Christopher Alexander etablierte Konzept der Muster einen großen Einfluß auf viele andere Bereiche hatte, finden sich insbesondere zu Gammas Veröffentlichungen einige Unterschiede: Vgl. \cite[S. 438 - 439]{gamma2004}
 
 \begin{enumerate} 
-\item Alexander beschäftigt sich mit Gebäuden und Städten, die von Menschen bereits seit Tausenden von Jahren gebaut werden. Deshalb existierten viele Beispiele, auf die er sich beziehen konnte. Softwaresysteme wurden zur Zeit von Gammas Veröffentlichungen erst seit relativ kurzer Zeit konstruiert und nur wenige davon konnten damals als klassisch bezeichnet werden.
+\item Alexander beschäftigt sich mit Gebäuden und Städten, die von Menschen bereits seit tausenden von Jahren gebaut werden. Deshalb existierten viele Beispiele, auf die er sich beziehen konnte. Softwaresysteme wurden zur Zeit von Gammas Veröffentlichungen erst seit relativ kurzer Zeit konstruiert und nur wenige davon konnten damals als klassisch bezeichnet werden.
 \item Alexander behauptet, dass seine Muster vollständige Gebäude erzeugen können. Gamma erhebt nicht den Anspruch darauf, dass seine Muster vollständige Programme erzeugen können.
 \item Außerdem gibt Alexander eine Anwendungsreihenfolge seiner Muster an, Gamma macht das nicht.
-\item Ein weiterer Unterschied ist die Herangehensweise. Alexander betont die von ihm adressierten Probleme, Gamma konzentriert sich dagegen mehr auf Lösungen.
+\item Ein weiterer Unterschied ist die Herangehensweise: Alexander betont die von ihm adressierten Probleme, Gamma konzentriert sich dagegen mehr auf Lösungen.
 \end{enumerate}
 
 \chapter{Design Patterns heute}\label{se:Design Patterns heute}
 
-Design Patterns haben bis heute nichts ihrer Relevanz verloren. Das Gegenteil ist der Fall, sie sind aus dem objektorientierten Entwurf nicht mehr wegzudenken. Design Patterns liefern nach wie vor viele Vorteile.
+Design Patterns haben bis heute nichts von ihrer Relevanz verloren. Das Gegenteil ist der Fall, sie sind aus dem objektorientierten Entwurf nicht mehr wegzudenken. Design Patterns liefern nach wie vor viele Vorteile.
 
 TODO...
    
