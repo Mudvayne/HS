@@ -58,7 +58,7 @@
 	\end{center}
 \end{floatingfigure}
 \footnotetext[1]{$https://www.microsoft.com/italy/futuredecoded/$}
-Erich Gamma wurde am 13. März 1961 in Zürich geboren und ist damit ein vergleichsweise junger Pionier der Informatik. Er promovierte an der Universität Zürich in Informatik. Danach arbeitete er zunächst als Software-Ingenieur bei \textit{UBILAB}, einem Forschungslabor der \textit{Schweizerischen Bankgesellschaft} (heute \textit{UBS}) und anschließend bei \textit{Taligent}. Bekannt wurde er vor allem als Mitautor des Buches \textit{Design Patterns – Elements of Reusable Object-Oriented Software} \cite{gamma2004}. Das Buch entstand im Zuge seiner Dissertation gemeinsam mit Richard Helm, Ralph Johnson und John Vlissides. Vgl. \cite{ErichGammaWikiDe} \\ \\
+\noindent Erich Gamma wurde am 13. März 1961 in Zürich geboren und ist damit ein vergleichsweise junger Pionier der Informatik. Er promovierte an der Universität Zürich in Informatik. Danach arbeitete er zunächst als Software-Ingenieur bei \textit{UBILAB}, einem Forschungslabor der \textit{Schweizerischen Bankgesellschaft} (heute \textit{UBS}) und anschließend bei \textit{Taligent}. Bekannt wurde er vor allem als Mitautor des Buches \textit{Design Patterns – Elements of Reusable Object-Oriented Software} \cite{gamma2004}. Das Buch entstand im Zuge seiner Dissertation gemeinsam mit Richard Helm, Ralph Johnson und John Vlissides. Vgl. \cite{ErichGammaWikiDe} \\ \\
 Der Titel des Buches wurde in einiger Hinsicht als zu lang erachtet, deshalb wurde der kurze und prägnante Titel: \glqq Das Buch der Viererbande\grqq{} (engl.: Gang of Four, kurz: GoF) als Synonym etabliert vgl. \cite{GangOfFour}. Zusammen mit allen Mitglieder der \textit{GoF} erhielt er 2006 den Dahl-Nygaard-Preis, welcher für herausragende berufliche Leistungen im Bereich der Softwareentwicklung von der \textit{Association Internationale pour les Technologies Objets} vergeben wird vgl. \cite{Dahl-Nygaard-Preis}. \\ \\
 Gamma war Initiator der offenen Entwicklungsumgebung Eclipse und hat deren Entwicklung ursprünglich geleitet. Außerdem war er einer der Hauptentwickler von \textit{ET++}, einer portablen \textit{C++} -Klassenbibliothek für interaktive grafische Anwendungen. Zusammen mit Kent Beck implementierte er \textit{JUnit} für \textit{Java}. Er war als Distinguished Engineer bei \textit{Rational Software}, eingestellt. \textit{Rational Software} ist eine Abteilung der \textit{IBM Software Group} in Zürich, welche sich schwerpunktmäßig mit System- und Analysedesign beschäftigt. Er arbeitete dort am Projekt \textit{Jazz / Rational Team Concert}. Relativ überraschend wechselte er im August 2011 zur Microsoft Corporation, für die er wieder als Distinguished Engineer tätig ist. Er leitet dort bis heute ein Team, das unterstützend an der Produktion der\textit{ Microsoft}-Entwicklungsumgebung \textit{Microsoft Visual Studio} mitwirkt. Vgl. \cite{ErichGammaWikiDe}
 
@@ -372,11 +372,17 @@ Auch wenn das von Christopher Alexander etablierte Konzept der Muster einen gro�
 \end{enumerate}
 
 \chapter{Design Patterns heute}\label{se:Design Patterns heute}
-
-Design Patterns haben bis heute nichts von ihrer Relevanz verloren. Das Gegenteil ist der Fall, sie sind aus dem objektorientierten Entwurf nicht mehr wegzudenken. Design Patterns liefern nach wie vor viele Vorteile.
-
-TODO...
-   
+Design Patterns haben bis heute nichts von ihrer Relevanz verloren. Das Gegenteil ist der Fall, sie sind aus dem objektorientierten Entwurf nicht mehr wegzudenken. Sie haben die Art und Weise verändert, wie Software Entwickler objektorientierte Software entwerfen. Anstatt Lösungen für Entwurfsprobleme wieder und wieder erneut erarbeiten zu müssen, existiert heute ein solider Grundstock an Design Patterns, die die \textit{best practice} im Systementwurf darstellen. Erich Gamma blickt im Buch \textit{Software Pioneers - Contributions to Software Engineering} \cite[S. 688 - 700]{Broy2014} zurück auf seine Arbeit zu Design Patterns und schildert, wo er sie heute sieht: \\ \\
+Die Literatur rund um Design Patterns nimmt immer mehr zu. Gamma stellt fest, dass es sogar schwierig wird diese Vielfalt an neuen Mustern auf sinnvolle Art und Weise zu verwalten. Aber das ist ein Problem, mit dem er gut leben kann, denn es beweist, dass Design Patterns nach wie vor populär sind. \\ \\
+Die Programmierung heute hat viele neue Freiheitsgrade. Das ist ein relativ neues und kompliziertes Problem, aber dennoch ist dieser Bereich bereits von Design Patterns abgedeckt. Er erwartet, dass sich dieser Trend auch in Zukunft fortsetzt und rechnet damit, dass für neue Technologien auch neue Kataloge von Mustern entstehen werden. \\ \\
+Design Patterns werden heute benutzt, um den Softwareentwurf an Universitäten zu lehren und haben ihren Weg in API's aktueller Software Plattformen wie \textit{Java} oder \textit{.NET} gefunden. Die Java Bibliothek verwendet eine große Zahl von Gammas Design Patterns, z.B. das Dekorierer Muster für Streams, \textit{Reader} und \textit{Writer}, das Beobachter Muster für \textit{Observer}, das Kompositium für \textit{Container} und viele weitere. \\ \\
+Zum Abschluss nennt Gamma die seiner Meinung nach wichtigsten Errungenschaften von Design Patterns:
+\begin{itemize}
+	\item Sie beschleunigen den Austausch zwischen Entwicklern, indem sie ein Vokabular für den Entwurf etablieren.
+	\item Sie ermöglichen die Wiederholung von erfolgreichen Entwürfen, anstatt sie neu finden zu müssen.
+	\item Sie helfen dabei existierende Systeme zu verbessern.
+	\item Systeme, die ihre Muster dokumentieren sind einfacher zu verstehen.
+\end{itemize}
 \newpage
 \bibliography{literatur}
 
